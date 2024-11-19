@@ -24,6 +24,8 @@
 
 -) Create a URL Mapping Table. Before migration, compile a list of existing URLs from your WordPress site (e.g., /distributive-adjectives/ https://www.englishreservoir.es/page-sitemap.xml
 
+-) for main pages like affiliate.php, method.php etc., names should be changed to spanish. Look at having the data kept in json files.
+
 -) Extracting Data from WordPress. Tools > Export, select "All content," and export it as an XML file. Consider using plugins like WP All Export or WP Migrate DB. These tools allow you to export specific content fields, filter content, and even generate JSON/CSV files directly.
 
 -) Create script to insert content into englishreservoir.es from the JSON files.
