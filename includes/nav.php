@@ -341,7 +341,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>central/method-english-reservoir">English
+													href="<?php echo BASE_URL; ?>method-english-reservoir">English
 													Reservoir Method</a>
 												<p class="mb-0 small">Get to know all about our teaching method.
 												</p>
@@ -358,7 +358,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>central/affiliate">Affiliate
+													href="<?php echo BASE_URL; ?>affiliate">Affiliate
 													Programme</a>
 												<p class="mb-0 small">Are you a content creator or teacher? Would you
 													like to become an English Reservoir affiliate and work with us?</p>
