@@ -26,9 +26,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 			<div class="container px-3 px-xl-5">  
 				<!-- Logo START --> 
 				<a class="navbar-brand me-0 mx-auto d-block text-center text-md-start ms-md-3 ps-md-3" href="<?php echo BASE_URL; ?>"> 
-					<img class="light-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>assets/images/LOGO-LIGHT.png" alt="logo">
+					<img class="light-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>central/assets/images/LOGO-LIGHT.png" alt="logo">
 					
-					<img class="dark-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>assets/images/LOGO-DARK.png" alt="logo">
+					<img class="dark-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>central/assets/images/LOGO-DARK.png" alt="logo">
 				</a>
 				<!-- Logo END -->
 
@@ -192,7 +192,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/A2-new.png" alt="A2 Waystage">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/A2-new.png" alt="A2 Waystage">
 													</a>
 												</div>
 											</div>
@@ -203,7 +203,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/B1-new.png" alt="B1 Threshold">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/B1-new.png" alt="B1 Threshold">
 													</a>
 												</div>
 											</div>
@@ -214,7 +214,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/B2-new.png" alt="B2 Vantage">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/B2-new.png" alt="B2 Vantage">
 													</a>
 												</div>
 											</div>
@@ -225,7 +225,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/C1-new.png" alt="C1 Advanced">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/C1-new.png" alt="C1 Advanced">
 													</a>
 												</div>
 											</div>
@@ -236,7 +236,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/C2-new.png" alt="C2 Mastery">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/C2-new.png" alt="C2 Mastery">
 													</a>
 												</div>
 											</div>
@@ -249,7 +249,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/b2_first.png" alt="B2 first">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/b2_first.png" alt="B2 first">
 													</a>
 												</div>
 											</div>
@@ -260,7 +260,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/c1_advanced.png" alt="C1 advanced">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/c1_advanced.png" alt="C1 advanced">
 													</a>
 												</div>
 											</div>
@@ -271,7 +271,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/c2_pro.png" alt="C2 proficiency">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/c2_pro.png" alt="C2 proficiency">
 													</a>
 												</div>
 											</div>
@@ -284,7 +284,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/pronunciacion-en-ingles.png" alt="Pronunciación en Inglés">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/pronunciacion-en-ingles.png" alt="Pronunciación en Inglés">
 													</a>
 												</div>
 											</div>
@@ -295,7 +295,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/Gramatica-esencial.png" alt="Gramatica esencial">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/Gramatica-esencial.png" alt="Gramatica esencial">
 													</a>
 												</div>
 											</div>
@@ -306,7 +306,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/verbos-en-ingles.png" alt="verbos en ingles">
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/verbos-en-ingles.png" alt="verbos en ingles">
 													</a>
 												</div>
 											</div>
@@ -330,7 +330,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>about-english-reservoir">About us</a>
+													href="<?php echo BASE_URL; ?>central/about-english-reservoir">About us</a>
 												<p class="mb-0 small">Who we are, How the courses work and how much time
 													you should dedicate.</p>
 											</div>
@@ -341,7 +341,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>method-english-reservoir">English
+													href="<?php echo BASE_URL; ?>central/method-english-reservoir">English
 													Reservoir Method</a>
 												<p class="mb-0 small">Get to know all about our teaching method.
 												</p>
@@ -358,7 +358,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>affiliate">Affiliate
+													href="<?php echo BASE_URL; ?>central/affiliate">Affiliate
 													Programme</a>
 												<p class="mb-0 small">Are you a content creator or teacher? Would you
 													like to become an English Reservoir affiliate and work with us?</p>
