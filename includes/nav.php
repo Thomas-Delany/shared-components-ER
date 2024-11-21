@@ -63,7 +63,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-gear text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo CENTRAL_PATH; ?>english-grammar/">English
+													href="<?php echo BASE_URL; ?>central/english-grammar/">English
 													Grammar</a>
 												<p class="mb-0 small">Nouns, Adjectives, Prepositions, Adverbs,
 													Conjunctions and Interjections.</p>
