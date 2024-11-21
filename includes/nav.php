@@ -63,7 +63,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-gear text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>central/english-grammar/">English
+													href="<?php echo BASE_URL; ?>english-grammar/">English
 													Grammar</a>
 												<p class="mb-0 small">Nouns, Adjectives, Prepositions, Adverbs,
 													Conjunctions and Interjections.</p>
@@ -330,7 +330,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>central/about-english-reservoir">About us</a>
+													href="<?php echo BASE_URL; ?>about-english-reservoir">About us</a>
 												<p class="mb-0 small">Who we are, How the courses work and how much time
 													you should dedicate.</p>
 											</div>
