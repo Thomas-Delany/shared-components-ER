@@ -180,7 +180,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<!-- Image -->
 												 <div class="">
 													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>assets/images/courses/A1-new.png"
+														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/A1-new.png"
 														alt="A1 Breakthrough">
 													</a>
 												</div>
