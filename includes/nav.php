@@ -316,88 +316,92 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 									</div>						
 								</div>
 						</li>
-						<!-- Nav item 3 More -->
-<li class="nav-item dropdown dropdown-fullwidth">
-    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
-    <div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
-        <div class="row p-4 m-4">
-            <!-- Column 1 -->
-            <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                <?php foreach ($nav_links_col1 as $label => $url): ?>
-                    <div class="d-flex mb-4 position-relative">
-                        <h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
-                        <div class="ms-2">
-                            <a class="stretched-link h6 mb-0 font-dosis" href="<?php echo htmlspecialchars($url); ?>">
-                                <?php echo htmlspecialchars($label); ?>
-                            </a>
-                            <p class="mb-0 small">Description for <?php echo htmlspecialchars($label); ?>.</p>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
+						<!-- Nav item 3 More-->
+						<li class="nav-item dropdown dropdown-fullwidth">
+							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">More</a>
+							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
+								<div class="row p-4 m-4">
 
-            <!-- Column 2 -->
-            <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                <?php foreach ($nav_links_col2 as $label => $url): ?>
-                    <div class="d-flex mb-4 position-relative">
-                        <h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
-                        <div class="ms-2">
-                            <a class="stretched-link h6 mb-0 font-dosis" href="<?php echo htmlspecialchars($url); ?>">
-                                <?php echo htmlspecialchars($label); ?>
-                            </a>
-                            <p class="mb-0 small">Description for <?php echo htmlspecialchars($label); ?>.</p>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
+									<!-- column item -->
+									 <!-- item -->
+								<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
+									<?php foreach ($nav_links_col1 as $label => $url): ?>
+										<div class="d-flex mb-4 position-relative">
+											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
+											<div class="ms-2">
+												<a class="stretched-link h6 mb-0 font-dosis"
+												href="<?php echo htmlspecialchars($url); ?>">
+												<?php echo htmlspecialchars($label); ?></a>
+												<p class="mb-0 small"><?php echo htmlspecialchars($label); ?></p>
+											</div>
+										</div>
 
-            <!-- Static Social Media Section -->
-            <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                <div class="d-flex mb-4 position-relative">
-                    <h2 class="mb-0"><i class="bi bi-wechat text-success"></i></h2>
-                    <div class="ms-2">
-                        <a class="stretched-link h6 mb-0 font-dosis" href="#">Our Social Media</a>
-                        <p class="mb-0 small">Learn more about us.</p>
-                        <div>
-                            <ul class="list-inline mb-0 mt-3">
-                                <li class="list-inline-item">
-                                    <a class="btn btn-white btn-sm shadow px-2 text-facebook stretched-link"
-                                       href="https://www.facebook.com/Englishreservoir/" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-fw fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="btn btn-white btn-sm shadow px-2 text-instagram stretched-link"
-                                       href="https://www.instagram.com/english_reservoir/?hl=en" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-fw fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="btn btn-white btn-sm shadow px-2 text-twitter stretched-link"
-                                       href="https://twitter.com/EN_Reservoir" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-fw fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="btn btn-white btn-sm shadow px-2 text-linkedin stretched-link"
-                                       href="https://www.youtube.com/@EnglishReservoir/featured" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-fw fa-youtube"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</li>
+										<!-- item -->
+										<div class="d-flex mb-4 position-relative">
+											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
+											<div class="ms-2">
+												<a class="stretched-link h6 mb-0 font-dosis"
+												href="<?php echo htmlspecialchars($url); ?>">
+												<?php echo htmlspecialchars($label); ?></a>
+												<p class="mb-0 small"><?php echo htmlspecialchars($label); ?></p>
+											</div>
+										</div>
+									<?php endforeach; ?>
+								</div>
 
 
-						
 
-						
+									<!-- column item -->
+								<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
+									<?php foreach ($nav_links_col2 as $label => $url): ?>
+										<!-- item -->
+										<div class="d-flex mb-4 position-relative">
+											<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
+											<div class="ms-2">
+												<a class="stretched-link h6 mb-0 font-dosis"
+												href="<?php echo htmlspecialchars($url); ?>"> <?php echo htmlspecialchars($label); ?></a>
+												<p class="mb-0 small"><?php echo htmlspecialchars($label); ?></p>
+											</div>
+										</div>
+									<?php endforeach; ?>
 
+										<!-- item -->
+										<div class="d-flex mb-4 position-relative">
+											<h2 class="mb-0"><i class="bi bi-wechat text-success"></i></h2>
+											<div class="ms-2">
+												<a class="stretched-link h6 mb-0 font-dosis" href="#">Our Social Media</a>
+												<p class="mb-0 small">Learn more about us.</p>
+												<div>
+													<ul class="list-inline mb-0 mt-3">
+														<li class="list-inline-item"> <a
+																class="btn btn-white btn-sm shadow px-2 text-facebook stretched-link"
+																href="https://www.facebook.com/Englishreservoir/" target="_blank" rel="noopener noreferrer"><i
+																	class="fab fa-fw fa-facebook-f"></i></a>
+
+														</li>
+														<li class="list-inline-item"> <a
+																class="btn btn-white btn-sm shadow px-2 text-instagram stretched-link"
+																href="https://www.instagram.com/english_reservoir/?hl=en" target="_blank" rel="noopener noreferrer"><i
+																	class="fab fa-fw fa-instagram"></i></a>
+														</li>
+														<li class="list-inline-item"> <a
+																class="btn btn-white btn-sm shadow px-2 text-twitter stretched-link"
+																href="https://twitter.com/EN_Reservoir" target="_blank" rel="noopener noreferrer"><i
+																	class="fab fa-fw fa-twitter"></i></a> </li>
+														<li class="list-inline-item"><a
+																class="btn btn-white btn-sm shadow px-2 text-linkedin stretched-link"
+																href="https://www.youtube.com/@EnglishReservoir/featured" target="_blank" rel="noopener noreferrer"><i
+																	class="fab fa-fw fa-youtube"></i></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 				<!-- Main navbar END -->
