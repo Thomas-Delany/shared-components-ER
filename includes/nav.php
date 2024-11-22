@@ -336,8 +336,10 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<p class="mb-0 small"><?php echo htmlspecialchars($label); ?></p>
 											</div>
 										</div>
+									<?php endforeach; ?>
 
 										<!-- item -->
+									<?php foreach ($nav_links_col1 as $label => $url): ?>
 										<div class="d-flex mb-4 position-relative">
 											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 											<div class="ms-2">
