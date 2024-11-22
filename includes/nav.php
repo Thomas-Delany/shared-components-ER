@@ -316,56 +316,43 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 									</div>						
 								</div>
 						</li>
-
-						<!-- Nav item 3 More-->
+						<!-- Nav item 3 More -->
 <li class="nav-item dropdown dropdown-fullwidth">
     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
     <div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
         <div class="row p-4 m-4">
-            <?php foreach ($nav_links as $label => $url): ?>
-                <!-- column item -->
-                <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                    <!-- item -->
+            <!-- Column 1 -->
+            <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
+                <?php foreach ($nav_links_col1 as $label => $url): ?>
                     <div class="d-flex mb-4 position-relative">
                         <h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
                         <div class="ms-2">
                             <a class="stretched-link h6 mb-0 font-dosis" href="<?php echo htmlspecialchars($url); ?>">
                                 <?php echo htmlspecialchars($label); ?>
                             </a>
-                            <p class="mb-0 small">Who we are, How the courses work and how much time you should dedicate.</p>
+                            <p class="mb-0 small">Description for <?php echo htmlspecialchars($label); ?>.</p>
                         </div>
                     </div>
+                <?php endforeach; ?>
+            </div>
 
-                    <!-- item -->
+            <!-- Column 2 -->
+            <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
+                <?php foreach ($nav_links_col2 as $label => $url): ?>
                     <div class="d-flex mb-4 position-relative">
                         <h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
                         <div class="ms-2">
                             <a class="stretched-link h6 mb-0 font-dosis" href="<?php echo htmlspecialchars($url); ?>">
                                 <?php echo htmlspecialchars($label); ?>
                             </a>
-                            <p class="mb-0 small">Get to know all about our teaching method.</p>
+                            <p class="mb-0 small">Description for <?php echo htmlspecialchars($label); ?>.</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- column item -->
-                <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                    <!-- item -->
-                    <div class="d-flex mb-4 position-relative">
-                        <h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
-                        <div class="ms-2">
-                            <a class="stretched-link h6 mb-0 font-dosis" href="<?php echo htmlspecialchars($url); ?>">
-                                <?php echo htmlspecialchars($label); ?>
-                            </a>
-                            <p class="mb-0 small">Are you a content creator or teacher? Would you like to become an English Reservoir affiliate and work with us?</p>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
 
             <!-- Static Social Media Section -->
             <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                <!-- item -->
                 <div class="d-flex mb-4 position-relative">
                     <h2 class="mb-0"><i class="bi bi-wechat text-success"></i></h2>
                     <div class="ms-2">
@@ -405,6 +392,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
         </div>
     </div>
 </li>
+
+
+						
 
 						
 
