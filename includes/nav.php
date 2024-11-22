@@ -331,8 +331,8 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-												href="<?php echo htmlspecialchars($url); ?>">
-												<?php echo htmlspecialchars($label); ?></a>
+												href="<?php echo htmlspecialchars($link['url']); ?>">
+												<?php echo htmlspecialchars($link['label']); ?></a>
 												<p class="mb-0 small"><?php echo htmlspecialchars($link['description']); ?></p>
 											</div>
 										</div>
@@ -344,8 +344,8 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-												href="<?php echo htmlspecialchars($url); ?>">
-												<?php echo htmlspecialchars($label); ?></a>
+												href="<?php echo htmlspecialchars($link['url']); ?>">
+												<?php echo htmlspecialchars($link['label']); ?></a>
 												<p class="mb-0 small"><?php echo htmlspecialchars($link['description']); ?></p>
 											</div>
 										</div>
@@ -362,7 +362,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-												href="<?php echo htmlspecialchars($url); ?>"> <?php echo htmlspecialchars($label); ?></a>
+												href="<?php echo htmlspecialchars($link['url']); ?>"> <?php echo htmlspecialchars($link['label']); ?></a>
 												<p class="mb-0 small"><?php echo htmlspecialchars($link['description']); ?></p>
 											</div>
 										</div>
