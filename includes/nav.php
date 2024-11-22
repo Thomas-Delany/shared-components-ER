@@ -323,6 +323,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 								aria-expanded="false">More</a>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 								<div class="row p-4 m-4">
+								<?php foreach ($nav_links as $label => $url): ?>
 
 									<!-- column item -->
 									<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
@@ -331,7 +332,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>english-reservoir-quienes-somos">About us</a>
+												href="<?php echo htmlspecialchars($url); ?>"><?php echo htmlspecialchars($label); ?></a>
 												<p class="mb-0 small">Who we are, How the courses work and how much time
 													you should dedicate.</p>
 											</div>
@@ -342,8 +343,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>metodo-english-reservoir">English
-													Reservoir Method</a>
+												href="<?php echo htmlspecialchars($url); ?>"><?php echo htmlspecialchars($label); ?></a>
 												<p class="mb-0 small">Get to know all about our teaching method.
 												</p>
 											</div>
@@ -359,8 +359,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>afiliado">Affiliate
-													Programme</a>
+												href="<?php echo htmlspecialchars($url); ?>"><?php echo htmlspecialchars($label); ?></a>
 												<p class="mb-0 small">Are you a content creator or teacher? Would you
 													like to become an English Reservoir affiliate and work with us?</p>
 											</div>
@@ -398,8 +397,8 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												</div>
 											</div>
 										</div>
-
 									</div>
+								<?php endforeach; ?>
 								</div>
 							</div>
 						</li>
