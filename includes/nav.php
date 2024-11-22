@@ -333,7 +333,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<a class="stretched-link h6 mb-0 font-dosis"
 												href="<?php echo htmlspecialchars($url); ?>">
 												<?php echo htmlspecialchars($label); ?></a>
-												<p class="mb-0 small"><?php echo htmlspecialchars($label); ?></p>
+												<p class="mb-0 small"><?php echo htmlspecialchars($link['description']); ?></p>
 											</div>
 										</div>
 									<?php endforeach; ?>
@@ -346,7 +346,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<a class="stretched-link h6 mb-0 font-dosis"
 												href="<?php echo htmlspecialchars($url); ?>">
 												<?php echo htmlspecialchars($label); ?></a>
-												<p class="mb-0 small"><?php echo htmlspecialchars($label); ?></p>
+												<p class="mb-0 small"><?php echo htmlspecialchars($link['description']); ?></p>
 											</div>
 										</div>
 									<?php endforeach; ?>
@@ -363,7 +363,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
 												href="<?php echo htmlspecialchars($url); ?>"> <?php echo htmlspecialchars($label); ?></a>
-												<p class="mb-0 small"><?php echo htmlspecialchars($label); ?></p>
+												<p class="mb-0 small"><?php echo htmlspecialchars($link['description']); ?></p>
 											</div>
 										</div>
 									<?php endforeach; ?>
