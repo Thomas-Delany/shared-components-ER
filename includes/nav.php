@@ -326,7 +326,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 									<!-- column item -->
 									 <!-- item -->
 								<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-								    <?php foreach ([$nav_links_item1, $nav_links_item2] as $link): ?>
+								    <?php foreach ([$nav_links_item1] as $link): ?>
 										<div class="d-flex mb-4 position-relative">
 											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
 											<div class="ms-2">
@@ -336,9 +336,10 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												<p class="mb-0 small"><?php echo htmlspecialchars($link['description']); ?></p>
 											</div>
 										</div>
+									<?php endforeach; ?>	
 									
 										<!-- item -->
-									
+									<?php foreach ([$nav_links_item2] as $link): ?>
 										<div class="d-flex mb-4 position-relative">
 											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 											<div class="ms-2">
