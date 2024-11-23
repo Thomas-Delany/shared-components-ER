@@ -175,11 +175,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 								<div class="d-flex flex-wrap justify-content-between p-4 m-4 font-dosis">
 									<div class="row justify-content-center g-4 pb-1">
 									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Select your level</h5>
-									<?php $row_count = 0; $images_per_row = 3; // 3 images per row for large screens
-									foreach ($nav_image_links as $image): if ($row_count % $images_per_row === 0 && $row_count > 0): ?>
-									</div> <!-- Close previous row -->
-									<div class="row"> <!-- Start new row -->
-									<?php endif; ?>
+									<?php foreach ($nav_image_links as $image): ?>
 
 										<div class="col-12 col-md-4 col-xl-4">
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
@@ -193,142 +189,11 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											</div>
 										</div>
 
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												   <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												   <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
 										<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Cambridge</h5>
 
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
 										<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Specialized</h5>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-4 col-xl-4">
-											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
-												<!-- Image -->
-												 <div class="">
-												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
-														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
-														alt="<?php echo htmlspecialchars($image['alt']); ?>">
-													</a>
-												</div>
-											</div>
-										</div>
-									<?php $row_count++; endforeach; ?>
+										
+									<?php endforeach; ?>
 									</div>						
 								</div>
 						</li>
