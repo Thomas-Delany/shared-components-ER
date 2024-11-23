@@ -172,10 +172,17 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false">Academy</a>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
-								
-									<div class="row justify-content-center g-4 pb-1">
+									<div class="row justify-content-center g-4 pb-1 p-4 m-4 font-dosis">
 									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Select your level</h5>
-									<?php foreach ($nav_image_links as $image): ?>
+									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Cambridge</h5>
+									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Specialized</h5>
+
+									<?php
+    $counter = 0; // Initialize a counter
+    foreach ($nav_image_links as $image):
+      if ($counter % 3 === 0 && $counter !== 0): ?>
+        </div><div class="row justify-content-center g-4 pb-1">
+      <?php endif; ?>
 
 										<div class="col-12 col-md-4 col-xl-4">
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
@@ -188,12 +195,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 												</div>
 											</div>
 										</div>
-
-										<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Cambridge</h5>
-
-										<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Specialized</h5>
-										
-									<?php endforeach; ?>
+										<?php
+    $counter++; // Increment the counter
+    endforeach; ?>
 									</div>						
 								
 						</li>
