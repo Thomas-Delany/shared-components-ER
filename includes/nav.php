@@ -174,17 +174,15 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 									<div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
 
-									
-									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Select your level</h5>
-									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Cambridge</h5>
-									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Specialized</h5>
-
 									<?php
   $counter = 0; // Initialize a counter
   foreach ($nav_image_links as $image):
-    if ($counter % 3 === 0 && $counter !== 0): ?>
-      </div><div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
+    // Check if the current element is a header and display it
+    if (isset($image['header'])): ?>
+      <h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header"><?php echo htmlspecialchars($image['header']); ?></h5>
     <?php endif; ?>
+
+									
 
 										<div class="col-12 col-md-4 col-xl-4">
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
