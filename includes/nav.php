@@ -175,14 +175,15 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 								<div class="d-flex flex-wrap justify-content-between p-4 m-4 font-dosis">
 									<div class="row justify-content-center g-4 pb-1">
 									<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header">Select your level</h5>
+									<?php foreach ($nav_image_links as $image): ?>
 
 										<div class="col-12 col-md-4 col-xl-4">
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/A1-new.png"
-														alt="A1 Breakthrough">
+													<a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -192,8 +193,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/A2-new.png" alt="A2 Waystage">
+												   <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -203,8 +205,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/B1-new.png" alt="B1 Threshold">
+												   <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -214,8 +217,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/B2-new.png" alt="B2 Vantage">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -225,8 +229,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/C1-new.png" alt="C1 Advanced">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -236,8 +241,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/C2-new.png" alt="C2 Mastery">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -249,8 +255,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/b2_first.png" alt="B2 first">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -260,8 +267,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/c1_advanced.png" alt="C1 advanced">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -271,8 +279,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/c2_pro.png" alt="C2 proficiency">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -284,8 +293,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/pronunciacion-en-ingles.png" alt="Pronunciación en Inglés">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -295,8 +305,9 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/Gramatica-esencial.png" alt="Gramatica esencial">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
@@ -306,13 +317,14 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
 												 <div class="">
-													<a href="#">
-														<img class="rounded-2 w-75" src="<?php echo BASE_URL; ?>central/assets/images/courses/verbos-en-ingles.png" alt="verbos en ingles">
+												    <a href="<?php echo htmlspecialchars($image['link_url']); ?>">
+														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
+														alt="<?php echo htmlspecialchars($image['alt']); ?>">
 													</a>
 												</div>
 											</div>
 										</div>
-
+									<?php endforeach; ?>
 									</div>						
 								</div>
 						</li>
