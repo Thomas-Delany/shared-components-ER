@@ -1,17 +1,6 @@
 <?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-
 require_once 'functions.php';
 $nav_data = load_json('/home/ilikelinux/englishreservoir.es/englishreservoir.es/data/includes/nav.json');
-
-// Check if the JSON data was successfully loaded
-if ($nav_data === null) {
-    echo "Failed to load JSON data.";
-    exit;
-}
 
 // Access specific arrays from the JSON data
 $navImageLinks = $nav_data['nav_image_links']; 
