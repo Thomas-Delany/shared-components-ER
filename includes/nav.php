@@ -209,21 +209,42 @@ $navLinks = $nav_data['nav_links'];
 								<div class="row p-4 m-4">
 									<!-- item -->
 									<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-										<?php foreach ($navLinks as $link): ?>
-											<div class="d-flex mb-4 position-relative">
-												<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
-												<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-												href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
-												<?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?>
-											    </a>
-												<p class="mb-0 small">
-													<?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?>
-												</p>
-											    </div>
-											</div>
-										<?php endforeach; ?>
-									</div>
+        <?php foreach ($navLinks as $index => $link): ?>
+            <?php if ($index % 2 === 0): // Check for even index (1st column) ?>
+                <div class="d-flex mb-4 position-relative">
+                    <h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
+                    <div class="ms-2">
+                        <a class="stretched-link h6 mb-0 font-dosis"
+                           href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
+                            <?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?>
+                        </a>
+                        <p class="mb-0 small">
+                            <?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+
+	<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
+        <?php foreach ($navLinks as $index => $link): ?>
+            <?php if ($index % 2 !== 0): // Check for odd index (2nd column) ?>
+                <div class="d-flex mb-4 position-relative">
+                    <h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
+                    <div class="ms-2">
+                        <a class="stretched-link h6 mb-0 font-dosis"
+                           href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
+                            <?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?>
+                        </a>
+                        <p class="mb-0 small">
+                            <?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
 									
 									<!-- item -->
 									<div class="d-flex mb-4 position-relative">
