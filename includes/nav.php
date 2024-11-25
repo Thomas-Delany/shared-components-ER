@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 
 require_once 'functions.php';
-$nav_data = load_json('/home/thomas/englishreservoir.es/data/includes/nav.json');
+$nav_data = load_json('/home/ilikelinux/englishreservoir.es/englishreservoir.es/data/includes/nav.json');
 
 // Check if the JSON data was successfully loaded
 if ($nav_data === null) {
