@@ -176,7 +176,7 @@ $navLinks = $nav_data['nav_links'];
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false">Academy</a>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
-									<div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
+								<div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
 
 									<?php $counter = 0; // Initialize a counter
 									foreach ($navImageLinks as $image):
@@ -188,7 +188,7 @@ $navLinks = $nav_data['nav_links'];
 										<div class="col-12 col-md-4 col-xl-4">
 											<div class="bg-opacity-10 rounded-3 text-center p-1 position-relative btn-transition">
 												<!-- Image -->
-												 <div class="">
+												<div class="">
 													<a href="<?php echo htmlspecialchars($image['link_url']); ?>">
 														<img src="<?php echo BASE_URL . htmlspecialchars($image['image_url']); ?>" class="rounded-2 w-75"
 														alt="<?php echo htmlspecialchars($image['alt']); ?>">
@@ -196,9 +196,11 @@ $navLinks = $nav_data['nav_links'];
 												</div>
 											</div>
 										</div>
-										<?php $counter++; endforeach; ?>
-									</div>							
+									<?php $counter++; endforeach; ?>
+								</div>	
+							</div>							
 						</li>
+
 						<!-- Nav item 3 More-->
 						<li class="nav-item dropdown dropdown-fullwidth">
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -206,7 +208,7 @@ $navLinks = $nav_data['nav_links'];
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 								<div class="row p-4 m-4">
 									<!-- item -->
-									 <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
+									<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
 										<?php foreach ($navLinks as $link): ?>
 											<div class="d-flex mb-4 position-relative">
 												<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
@@ -258,41 +260,35 @@ $navLinks = $nav_data['nav_links'];
 											</div>
 										<?php endforeach; ?>
 									</div>
-
-
-
 									
-
-										<!-- item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-wechat text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis" href="#">Our Social Media</a>
+									<!-- item -->
+									<div class="d-flex mb-4 position-relative">
+										<h2 class="mb-0"><i class="bi bi-wechat text-success"></i></h2>
+									    <div class="ms-2">
+											    <a class="stretched-link h6 mb-0 font-dosis" href="#">Our Social Media</a>
 												<p class="mb-0 small">Learn more about us.</p>
-												<div>
-													<ul class="list-inline mb-0 mt-3">
-														<li class="list-inline-item"> <a
-																class="btn btn-white btn-sm shadow px-2 text-facebook stretched-link"
-																href="https://www.facebook.com/Englishreservoir/" target="_blank" rel="noopener noreferrer"><i
-																	class="fab fa-fw fa-facebook-f"></i></a>
-
-														</li>
-														<li class="list-inline-item"> <a
-																class="btn btn-white btn-sm shadow px-2 text-instagram stretched-link"
-																href="https://www.instagram.com/english_reservoir/?hl=en" target="_blank" rel="noopener noreferrer"><i
-																	class="fab fa-fw fa-instagram"></i></a>
-														</li>
-														<li class="list-inline-item"> <a
-																class="btn btn-white btn-sm shadow px-2 text-twitter stretched-link"
-																href="https://twitter.com/EN_Reservoir" target="_blank" rel="noopener noreferrer"><i
-																	class="fab fa-fw fa-twitter"></i></a> </li>
-														<li class="list-inline-item"><a
-																class="btn btn-white btn-sm shadow px-2 text-linkedin stretched-link"
-																href="https://www.youtube.com/@EnglishReservoir/featured" target="_blank" rel="noopener noreferrer"><i
-																	class="fab fa-fw fa-youtube"></i></a>
-														</li>
-													</ul>
-												</div>
+										    <div>
+												<ul class="list-inline mb-0 mt-3">
+													<li class="list-inline-item"> <a
+														class="btn btn-white btn-sm shadow px-2 text-facebook stretched-link"
+														href="https://www.facebook.com/Englishreservoir/" target="_blank" rel="noopener noreferrer"><i
+														class="fab fa-fw fa-facebook-f"></i></a>
+													</li>
+													<li class="list-inline-item"> <a
+														class="btn btn-white btn-sm shadow px-2 text-instagram stretched-link"
+														href="https://www.instagram.com/english_reservoir/?hl=en" target="_blank" rel="noopener noreferrer"><i
+														class="fab fa-fw fa-instagram"></i></a>
+													</li>
+													<li class="list-inline-item"> <a
+														class="btn btn-white btn-sm shadow px-2 text-twitter stretched-link"
+														href="https://twitter.com/EN_Reservoir" target="_blank" rel="noopener noreferrer"><i
+														class="fab fa-fw fa-twitter"></i></a> </li>
+													<li class="list-inline-item"><a
+														class="btn btn-white btn-sm shadow px-2 text-linkedin stretched-link"
+														href="https://www.youtube.com/@EnglishReservoir/featured" target="_blank" rel="noopener noreferrer"><i
+														class="fab fa-fw fa-youtube"></i></a>
+													</li>
+												</ul>
 											</div>
 										</div>
 									</div>
