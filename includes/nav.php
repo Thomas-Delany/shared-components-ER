@@ -1,6 +1,10 @@
 <?php
-/*index.php in the root directory
-include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
+require_once '../functions.php';
+$nav_data = load_json('data/includes/nav.json');
+
+// Access specific arrays from the JSON data
+$navImageLinks = $nav_data['nav_image_links']; 
+$navLinks = $nav_data['nav_links'];
 ?>
 <style>
 .navbar-expand-xl .navbar-nav .dropdown:hover>.dropdown-menu {
@@ -175,7 +179,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 									<div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
 
 									<?php $counter = 0; // Initialize a counter
-									foreach ($nav_image_links as $image):
+									foreach ($navImageLinks as $image):
 										// Check if the current element is a header and display it
 										if (isset($image['header'])): ?>
 										<h5 class="text-center font-dosis fs-3 font-medium p-2 custom-title-header"><?php echo htmlspecialchars($image['header']); ?></h5>
@@ -205,7 +209,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 									<!-- column item -->
 									 <!-- item -->
 								<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-								    <?php foreach ([$nav_links_item1] as $link): ?>
+								    <?php foreach ($navLinks as $link): ?>
 										<div class="d-flex mb-4 position-relative">
 											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
 											<div class="ms-2">
@@ -218,7 +222,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 									<?php endforeach; ?>	
 									
 										<!-- item -->
-									<?php foreach ([$nav_links_item2] as $link): ?>
+									<?php foreach ($navLinks as $link): ?>
 										<div class="d-flex mb-4 position-relative">
 											<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 											<div class="ms-2">
@@ -235,7 +239,7 @@ include __DIR__ . '/config.php'; // Include config.php for BASE_URL*/
 
 									<!-- column item -->
 								<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-								    <?php foreach ([$nav_links_item3] as $link): ?>
+								    <?php foreach ($navLinks as $link): ?>
 										<!-- item -->
 										<div class="d-flex mb-4 position-relative">
 											<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
