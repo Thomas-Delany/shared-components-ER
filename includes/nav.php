@@ -242,12 +242,8 @@ $navLinks = $nav_data['nav_links'];
                         </p>
                     </div>
                 </div>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    </div>
-									
-									<!-- item -->
-									<div class="d-flex mb-4 position-relative">
+				<!-- item -->
+				<div class="d-flex mb-4 position-relative">
 										<h2 class="mb-0"><i class="bi bi-wechat text-success"></i></h2>
 									    <div class="ms-2">
 											    <a class="stretched-link h6 mb-0 font-dosis" href="#">Our Social Media</a>
@@ -277,6 +273,11 @@ $navLinks = $nav_data['nav_links'];
 											</div>
 										</div>
 									</div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+									
+									
 								</div>
 							</div>
 						</li>
