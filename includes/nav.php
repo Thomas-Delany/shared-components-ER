@@ -211,7 +211,7 @@ $navLinks = $nav_data['nav_links'];
 									<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
 										<?php foreach ($navLinks as $link): ?>
 											<div class="d-flex mb-4 position-relative">
-												<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
+												<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
 												<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
 												href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
@@ -229,7 +229,7 @@ $navLinks = $nav_data['nav_links'];
 									<div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
 										<?php foreach ($navLinks as $link): ?>
 											<div class="d-flex mb-4 position-relative">
-												<h2 class="mb-0"><i class="bi bi-currency-exchange text-success"></i></h2>
+												<h2 class="mb-0"><i class="bi bi-easel2 text-success"></i></h2>
 												<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis" 
 												href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
