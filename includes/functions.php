@@ -1,7 +1,7 @@
 <?php
 function load_json($file_path) {
     if (!file_exists($file_path)) {
-        return null;  // Return null if the file does not exist
+        return null;  // Return null if the file doesn't exist
     }
 
     $json_data = file_get_contents($file_path);
