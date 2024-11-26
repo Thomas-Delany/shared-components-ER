@@ -1,4 +1,5 @@
 <?php
+echo __FILE__;
 require_once 'functions.php';
 $nav_data = load_json('/home/ilikelinux/englishreservoir.es/englishreservoir.es/data/includes/nav.json');
 
