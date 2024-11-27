@@ -1,6 +1,9 @@
 <?php
 require_once 'functions.php';
-$nav_data = load_json(__DIR__ . '/data/includes/nav.json');
+// $nav_data = load_json(__DIR__ . '/data/includes/nav.json');
+
+$nav_data = load_json(CENTRAL_PATH . '../data/includes/nav.json');
+
 
 // JSON data includes
 $navImageLinks = $nav_data['nav_image_links']; 
