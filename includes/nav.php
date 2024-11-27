@@ -8,6 +8,7 @@ $nav_data = load_json(CENTRAL_PATH . '../data/includes/nav.json');
 // JSON data includes
 $navImageLinks = $nav_data['nav_image_links']; 
 $navLinks = $nav_data['nav_links'];
+$megaMenus = $nav_data['mega_menus'];
 ?>
 <style>
 .navbar-expand-xl .navbar-nav .dropdown:hover>.dropdown-menu {
@@ -205,9 +206,10 @@ $navLinks = $nav_data['nav_links'];
 						</li>
 
 						<!-- Nav item 3 More-->
+						<?php foreach ($megaMenus as $menu): ?>
 						<li class="nav-item dropdown dropdown-fullwidth">
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">More</a>
+								aria-expanded="false"><?php echo htmlspecialchars($menu['menu_title']); ?></a>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 							    <div class="row p-4 m-4">
 									<!-- item -->
@@ -215,7 +217,7 @@ $navLinks = $nav_data['nav_links'];
 								        <?php foreach ($navLinks as $index => $link): ?>
 									        <?php if ($index % 2 === 0): // Check for even index (1st column) ?>
 										    <div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
+											<h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
 										    <div class="ms-2">
                                             <a class="stretched-link h6 mb-0 font-dosis"
 											href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
@@ -249,7 +251,7 @@ $navLinks = $nav_data['nav_links'];
 											  <!-- item -->
 				
 											  <div class="d-flex mb-4 position-relative">
-												<h2 class="mb-0"><i class="bi bi-wechat text-success"></i></h2>
+												<h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
 												<div class="ms-2">
 											    <a class="stretched-link h6 mb-0 font-dosis" href="#">Our Social Media</a>
 												<p class="mb-0 small">Learn more about us.</p>
@@ -284,6 +286,7 @@ $navLinks = $nav_data['nav_links'];
 							</div>
 							</div>
 						</li>
+						<?php endforeach; ?>
 					</ul>
 				</div>
 				<!-- Main navbar END -->
