@@ -1,8 +1,7 @@
 <?php
-// require_once 'functions.php';
+require_once 'functions.php';
 // $nav_data = load_json(__DIR__ . '/data/includes/nav.json');
 
-require_once CENTRAL_PATH . 'functions.php';
 $nav_data = load_json(CENTRAL_PATH . '../data/includes/nav.json');
 
 
