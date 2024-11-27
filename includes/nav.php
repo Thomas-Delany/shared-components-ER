@@ -1,6 +1,6 @@
 <?php
 require_once 'functions.php';
-$nav_data = load_json('/home/ilikelinux/englishreservoir.es/englishreservoir.es/data/includes/nav.json');
+$nav_data = load_json('/home/ilikelinux/englishreservoir.es/data/includes/nav.json');
 
 // Access specific arrays from the JSON data
 $navImageLinks = $nav_data['nav_image_links']; 
