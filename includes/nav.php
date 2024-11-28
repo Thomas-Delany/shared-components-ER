@@ -258,7 +258,7 @@ $megaMenus = $nav_data['mega_menus'];
                                 href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
                                 <?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?>
                             </a>
-                            
+                            <p class="mb-0 small"><?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?></p>
                             <ul class="list-inline mb-0 mt-3">
                                 <li class="list-inline-item">
                                     <a class="btn btn-white btn-sm shadow px-2 text-facebook"
