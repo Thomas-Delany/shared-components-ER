@@ -174,10 +174,8 @@ $megaMenus = $nav_data['mega_menus'];
 
 						<!-- Nav item 2 Academy -->
 						<li class="nav-item dropdown dropdown-fullwidth">
-						    <?php foreach ($megaMenus as $menu): ?>
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false"><?php echo htmlspecialchars($menu['menu_title']); ?></a>
-						    <?php endforeach; ?>
+								aria-expanded="false">Academy</a>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 								<div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
 
