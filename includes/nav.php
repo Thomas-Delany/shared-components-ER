@@ -3,6 +3,7 @@ require_once 'functions.php';
 $nav_data = load_json(CENTRAL_PATH . '../data/includes/nav.json');
 
 // JSON data includes
+$megaMenuItems = $nav_data['mega_menu_items'];
 $navImageLinks = $nav_data['nav_image_links']; 
 $navLinks = $nav_data['nav_links'];
 $megaMenus = $nav_data['mega_menus'];
@@ -60,114 +61,23 @@ $megaMenus = $nav_data['mega_menus'];
 								aria-expanded="false">Reservoir!</a>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 								<div class="row p-4 m-4 font-dosis">
-
+								<?php foreach ($megaMenuItems as $column): ?>
 									<!-- column item -->
 									<div class="col-xl-4 col-xxl-4 mb-3">
+									<?php foreach ($column as $item): ?>
 										<!-- item -->
 										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-gear text-success"></i></h2>
+											<h2 class="mb-0"><i class="<?php echo htmlspecialchars($item['icon_class']); ?>"></i></h2>
 											<div class="ms-2">
 												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>english-grammar/">English
-													Grammar</a>
-												<p class="mb-0 small">Nouns, Adjectives, Prepositions, Adverbs,
-													Conjunctions and Interjections.</p>
+												href="<?php echo htmlspecialchars(BASE_URL . $item['url']); ?>">
+												<?php echo htmlspecialchars($item['label']); ?></a>
+												<p class="mb-0 small"><?php echo htmlspecialchars($item['description']); ?></p>
 											</div>
 										</div>
-
-										<!-- sub item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-rocket text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>english-verbs/">Verbs in English</a>
-												<p class="mb-0 small">Main and Modal Auxiliaries, Active and Passive
-													forms, Phrasal Verbs, Copulas, Ordinary verbs, "Get" and more!
-												</p>
-											</div>
-										</div>
-
-										<!-- sub item -->
-										 <div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-question-square text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>english-confusions/">English Confusions</a>
-												<p class="mb-0 small">Do vs. make, to vs. for, on vs. upon, every
-													frequent doubt, you name it, we have you covered.</p>
-											</div>
-										</div>
+								    <?php endforeach; ?>
 									</div>
-
-									<!-- column item --> 
-									<div class="col-xl-4 col-xxl-4 mb-3">
-										<!-- sub item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-mortarboard text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>cambridge/">Cambridge
-													Courses</a>
-												<p class="mb-0 small">B2 Cambridge First, C1 Cambridge Advanced and C2
-													Cambridge Proficiency.</p>
-											</div>
-										</div>
-
-										<!-- sub item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-brush text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>english-punctuation">Punctuation</a>
-												<p class="mb-0 small">Apostrophes, Colons, Semicolons, Commas, Hyphens,
-													Fullstops, Question and Exclamation marks, and Quotation Marks.</p>
-											</div>
-										</div>
-
-										<!-- sub item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-volume-up text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>english-pronunciation/">Pronunciation</a>
-												<p class="mb-0 small">IPA, Vowels, Consonants, Dipthongs, Triphthongs,
-													Nasal Sounds, Common Mistakes, and more.</p>
-											</div>
-										</div>
-									</div>
-
-									<!-- column item -->
-									<div class="col-xl-4 col-xxl-4 mb-3">
-										<!-- sub item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-book text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="<?php echo BASE_URL; ?>blog/">Blog</a>
-												<p class="mb-0 small">Lots of Interesting reads in both English and
-													Spanish.</p>
-											</div>
-										</div>
-										<!-- sub item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-youtube text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="https://www.youtube.com/@EnglishReservoir" target="_blank" rel="noopener noreferrer">Learn for Free!</a>
-												<p class="mb-0 small">100's of free learning tutorials on YouTube!</p>
-											</div>
-										</div>
-
-										<!-- sub item -->
-										<div class="d-flex mb-4 position-relative">
-											<h2 class="mb-0"><i class="bi bi-chat-dots text-success"></i></h2>
-											<div class="ms-2">
-												<a class="stretched-link h6 mb-0 font-dosis"
-													href="https://cursos.englishreservoir.com/p/curso-de-ingles-gratuito" target="_blank" rel="noopener noreferrer">Take A Free English Course!</a>
-												<p class="mb-0 small">Start your learning right now. You'll learn heaps! No sign ups, completely free!</p>
-											</div>
-										</div>
-									</div>
+								<?php endforeach; ?>
 								</div>
 							</div>
 						</li>
