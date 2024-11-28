@@ -252,9 +252,9 @@ $megaMenus = $nav_data['mega_menus'];
                 <?php foreach ($menu['nav_links'] as $index => $link): ?>
                     <?php if ($index === 3): // Unique social media block ?>
                     <div class="d-flex mb-4 position-relative">
-                        <h2 class="mb-0"><i class="bi bi-share-fill"></i></h2>
+                        <h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
                         <div class="ms-2">
-                            <p class="mb-0 small"><?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?></p>
+                            <p class="mb-0 small"><?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?><?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?></p>
                             <ul class="list-inline mb-0 mt-3">
                                 <li class="list-inline-item">
                                     <a class="btn btn-white btn-sm shadow px-2 text-facebook"
