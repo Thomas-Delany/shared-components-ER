@@ -254,7 +254,11 @@ $megaMenus = $nav_data['mega_menus'];
                     <div class="d-flex mb-4 position-relative">
                         <h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
                         <div class="ms-2">
-                            <p class="mb-0 small"><?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?><?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?></p>
+						    <a class="stretched-link h6 mb-0 font-dosis"
+                                href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
+                                <?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?>
+                            </a>
+                            
                             <ul class="list-inline mb-0 mt-3">
                                 <li class="list-inline-item">
                                     <a class="btn btn-white btn-sm shadow px-2 text-facebook"
