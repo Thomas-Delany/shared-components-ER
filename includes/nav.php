@@ -1,9 +1,6 @@
 <?php
 require_once 'functions.php';
-// $nav_data = load_json(__DIR__ . '/data/includes/nav.json');
-
 $nav_data = load_json(CENTRAL_PATH . '../data/includes/nav.json');
-
 
 // JSON data includes
 $navImageLinks = $nav_data['nav_image_links']; 
@@ -177,8 +174,10 @@ $megaMenus = $nav_data['mega_menus'];
 
 						<!-- Nav item 2 Academy -->
 						<li class="nav-item dropdown dropdown-fullwidth">
+						    <?php foreach ($megaMenus as $menu): ?>
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">Academy</a>
+								aria-expanded="false"><?php echo htmlspecialchars($menu['menu_title']); ?></a>
+						    <?php endforeach; ?>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 								<div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
 
@@ -228,33 +227,14 @@ $megaMenus = $nav_data['mega_menus'];
 										    </p>
 										    </div>
 								            </div>
-								            <?php endif; ?>
-									   <?php endforeach; ?>
 									</div>
-
-	                                <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                                        <?php foreach ($navLinks as $index => $link): ?>
-                                            <?php if ($index % 2 !== 0): // Check for odd index (2nd column) ?>
-                                             <div class="d-flex mb-4 position-relative">
-                                              <h2 class="mb-0"><i class="bi bi-question-circle text-success"></i></h2>
-                                              <div class="ms-2">
-                                              <a class="stretched-link h6 mb-0 font-dosis"
-                                               href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
-                                               <?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?>
-                                               </a>
-                                               <p class="mb-0 small">
-                                               <?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?>
-                                               </p>
-                                              </div>
-                                              </div>
 				                              
 											  <!-- item -->
-				
-											  <div class="d-flex mb-4 position-relative">
+											<div class="d-flex mb-4 position-relative">
 												<h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
 												<div class="ms-2">
-											    <a class="stretched-link h6 mb-0 font-dosis" href="#">Our Social Media</a>
-												<p class="mb-0 small">Learn more about us.</p>
+											    <a class="stretched-link h6 mb-0 font-dosis" href="#"><?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?></a>
+												<p class="mb-0 small"><?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?></p>
 										       <div>
 												<ul class="list-inline mb-0 mt-3">
 													<li class="list-inline-item"> <a
@@ -277,13 +257,13 @@ $megaMenus = $nav_data['mega_menus'];
 														class="fab fa-fw fa-youtube"></i></a>
 													</li>
 												</ul>
-											  </div>
+											</div>
 										  </div>
 									    </div>
 									<?php endif; ?>
 									<?php endforeach; ?>
 								</div>
-							</div>
+							 </div>
 							</div>
 						</li>
 						<?php endforeach; ?>
