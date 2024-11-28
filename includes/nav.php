@@ -173,9 +173,11 @@ $megaMenus = $nav_data['mega_menus'];
 						</li>
 
 						<!-- Nav item 2 Academy -->
+					<?php foreach ($navImageLinks as $imageLink): ?>
+						<?php if (isset($imageLink['menu_title'])): ?>
 						<li class="nav-item dropdown dropdown-fullwidth">
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">Academia</a>
+								aria-expanded="false"><?php echo htmlspecialchars($imageLink['menu_title']); ?> </a>
 							<div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
 								<div class="row justify-content-center g-4 pb-1 d-flex flex-wrap p-4 m-4 font-dosis">
 
@@ -201,6 +203,8 @@ $megaMenus = $nav_data['mega_menus'];
 								</div>	
 							</div>							
 						</li>
+					  <?php endif; ?>
+                    <?php endforeach; ?>
 
 						<!-- Nav item 3 More-->
 						<?php foreach ($megaMenus as $menu): ?>
