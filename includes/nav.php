@@ -209,10 +209,10 @@ $megaMenus = $nav_data['mega_menus'];
         aria-expanded="false"><?php echo htmlspecialchars($menu['menu_title']); ?></a>
     <div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
         <div class="row p-4 m-4">
-            <!-- First Column (Even-indexed links) -->
+            <!-- First Column (Dynamic Links: First Three Items) -->
             <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                <?php foreach ($navLinks as $index => $link): ?>
-                    <?php if ($index < 3): // Limit to first 3 dynamic items ?>
+                <?php foreach ($menu['nav_links'] as $index => $link): ?>
+                    <?php if ($index < 3): // First 3 items ?>
                     <div class="d-flex mb-4 position-relative">
                         <h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
                         <div class="ms-2">
@@ -228,41 +228,46 @@ $megaMenus = $nav_data['mega_menus'];
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- Second Column (Unique Element) -->
+            <!-- Second Column (Unique Social Media Block) -->
             <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
-                <div class="d-flex mb-4 position-relative">
-                    <h2 class="mb-0"><i class="bi bi-share-fill"></i></h2>
-                    <div class="ms-2">
-                        <p class="mb-0 small">Follow us on social media:</p>
-                        <ul class="list-inline mb-0 mt-3">
-                            <li class="list-inline-item">
-                                <a class="btn btn-white btn-sm shadow px-2 text-facebook"
-                                    href="https://www.facebook.com/Englishreservoir/" target="_blank" rel="noopener noreferrer"><i
-                                        class="fab fa-fw fa-facebook-f"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-white btn-sm shadow px-2 text-instagram"
-                                    href="https://www.instagram.com/english_reservoir/?hl=en" target="_blank" rel="noopener noreferrer"><i
-                                        class="fab fa-fw fa-instagram"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-white btn-sm shadow px-2 text-twitter"
-                                    href="https://twitter.com/EN_Reservoir" target="_blank" rel="noopener noreferrer"><i
-                                        class="fab fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn btn-white btn-sm shadow px-2 text-linkedin"
-                                    href="https://www.youtube.com/@EnglishReservoir/featured" target="_blank" rel="noopener noreferrer"><i
-                                        class="fab fa-fw fa-youtube"></i></a>
-                            </li>
-                        </ul>
+                <?php foreach ($menu['nav_links'] as $index => $link): ?>
+                    <?php if ($index === 3): // Unique element ?>
+                    <div class="d-flex mb-4 position-relative">
+                        <h2 class="mb-0"><i class="bi bi-share-fill"></i></h2>
+                        <div class="ms-2">
+                            <p class="mb-0 small"><?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?></p>
+                            <ul class="list-inline mb-0 mt-3">
+                                <li class="list-inline-item">
+                                    <a class="btn btn-white btn-sm shadow px-2 text-facebook"
+                                        href="https://www.facebook.com/Englishreservoir/" target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-fw fa-facebook-f"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-white btn-sm shadow px-2 text-instagram"
+                                        href="https://www.instagram.com/english_reservoir/?hl=en" target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-fw fa-instagram"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-white btn-sm shadow px-2 text-twitter"
+                                        href="https://twitter.com/EN_Reservoir" target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-white btn-sm shadow px-2 text-linkedin"
+                                        href="https://www.youtube.com/@EnglishReservoir/featured" target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-fw fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 </li>
 <?php endforeach; ?>
+
 
 					</ul>
 				</div>
