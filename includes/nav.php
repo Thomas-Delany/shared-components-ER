@@ -209,10 +209,10 @@ $megaMenus = $nav_data['mega_menus'];
         aria-expanded="false"><?php echo htmlspecialchars($menu['menu_title']); ?></a>
     <div class="dropdown-menu dropdown-menu-end bg-light bg-gradient border border-success" data-bs-popper="none">
         <div class="row p-4 m-4">
-            <!-- First Column (Dynamic Links: First Three Items) -->
+            <!-- First Column (Dynamic Links: First Two Items) -->
             <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
                 <?php foreach ($menu['nav_links'] as $index => $link): ?>
-                    <?php if ($index < 3): // First 3 items ?>
+                    <?php if ($index < 2): // First two items (indices 0, 1) ?>
                     <div class="d-flex mb-4 position-relative">
                         <h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
                         <div class="ms-2">
@@ -228,10 +228,29 @@ $megaMenus = $nav_data['mega_menus'];
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
-            <!-- Second Column (Unique Social Media Block) -->
+            <!-- Second Column -->
             <div class="col-xl-6 col-xxl-6 mb-3 font-dosis">
+                <!-- Dynamic Link: Third Item (Index 2) -->
                 <?php foreach ($menu['nav_links'] as $index => $link): ?>
-                    <?php if ($index === 3): // Unique element ?>
+                    <?php if ($index === 2): // Third item (index 2) ?>
+                    <div class="d-flex mb-4 position-relative">
+                        <h2 class="mb-0"><i class="<?php echo htmlspecialchars($link['icon_class']); ?>"></i></h2>
+                        <div class="ms-2">
+                            <a class="stretched-link h6 mb-0 font-dosis"
+                                href="<?php echo htmlspecialchars(BASE_URL . (isset($link['url']) ? $link['url'] : '#')); ?>">
+                                <?php echo htmlspecialchars(isset($link['label']) ? $link['label'] : ''); ?>
+                            </a>
+                            <p class="mb-0 small">
+                                <?php echo htmlspecialchars(isset($link['description']) ? $link['description'] : ''); ?>
+                            </p>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+
+                <!-- Unique Social Media Block -->
+                <?php foreach ($menu['nav_links'] as $index => $link): ?>
+                    <?php if ($index === 3): // Unique social media block ?>
                     <div class="d-flex mb-4 position-relative">
                         <h2 class="mb-0"><i class="bi bi-share-fill"></i></h2>
                         <div class="ms-2">
