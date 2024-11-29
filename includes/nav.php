@@ -206,7 +206,7 @@ $megaMenus = $nav_data['mega_menus'];
 <?php endforeach; ?>
 
 
-					</ul>
+ 					</ul>
 				</div>
 				<!-- Main navbar END -->
 
