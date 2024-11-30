@@ -1,5 +1,5 @@
 <?php
-// Course images that include src, alt and url
+// Course images that include src alt and url
 $images = [
     'cursos-de-ingles' => [
         'src' => BASE_URL . 'assets/images/courses/cursos-de-ingles.png',
@@ -79,13 +79,13 @@ $images = [
                 </table>
             </div>
         <?php endif; ?>
-        
+
         <?php if (isset($section['youtube'])): ?>
             <div class="ratio ratio-16x9 my-5">
                 <?php echo $section['youtube']; ?>
             </div>
         <?php endif; ?>
-        
+
         <?php foreach ($images as $key => $image): ?>
             <?php if (isset($section[$key]) && $section[$key]): ?>
                 <div class="col-12 text-center">
@@ -97,5 +97,3 @@ $images = [
         <?php endforeach; ?>
     <?php endforeach; ?>
 </div>
-
-
