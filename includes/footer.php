@@ -45,14 +45,6 @@ $footerColumns = $footer_data['footerColumns'];
 
     <!-- Divider -->
     <hr class="mt-4 mb-0">
-
-    <!-- Bottom footer -->
-    <div class="py-4">
-        <div class="container px-0">
-            <!-- copyright text -->
-            <div class="text-center text-white"> Copyright ©2024 English Reservoir — English Courses</div>
-        </div>
-    </div>
 </div>
 </footer>
 <!--Footer END -->
