@@ -73,22 +73,22 @@
                 if (isset($image_url) && isset($image_alt)) {
                     include __DIR__ . '/includes/image-template.php';
                 }
-                ?>
 
-                <!-- Main content of page -->
-                <?php echo $page_content; ?>
 
-                <?php
+                // Main content of page 
+                echo $page_content;
+
+
                 // Include TOC if $show_toc is set to true
                 if (isset($show_toc) && $show_toc === true) {
                     include __DIR__ . '/includes/table-of-contents.php';
                 }
-                ?>
 
-                <!-- Include content sections -->
-                <?php include __DIR__ . '/includes/content-section.php'; ?>
 
-                <?php
+                // Include content sections 
+                include __DIR__ . '/includes/content-section.php';
+
+
                 // Include "see also" section only if the $see_also_links array is set and not empty
                 if (isset($see_also_links) && !empty($see_also_links)) {
                     include __DIR__ . '/includes/see-also-template.php';
