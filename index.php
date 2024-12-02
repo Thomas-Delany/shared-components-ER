@@ -1,5 +1,5 @@
 <?php
-require_once 'functions.php';
+require_once 'includes/functions.php';
 $index_data = load_json(CENTRAL_PATH . '../data/pages/index.json');
 
 // JSON data includes
