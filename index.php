@@ -1,3 +1,11 @@
+<?php
+require_once __DIR__ . '/includes/functions.php';
+$index_data = load_json(CENTRAL_PATH . '../data/pages/index.json');
+
+// JSON data includes
+$indexData = $index_data['sections'];
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
