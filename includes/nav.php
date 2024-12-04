@@ -31,9 +31,9 @@ $megaMenus = $nav_data['mega_menus'];
 		<div class="container px-3 px-xl-5">
 			<!-- Logo START -->
 			<a class="navbar-brand me-0 mx-auto d-block text-center text-md-start ms-md-3 ps-md-3" href="<?php echo BASE_URL; ?>">
-				<img class="light-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>central/assets/images/LOGO-LIGHT.png" alt="logo">
+				<img class="light-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>assets/images/LOGO-LIGHT.png" alt="logo">
 
-				<img class="dark-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>central/assets/images/LOGO-DARK.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="<?php echo BASE_URL; ?>assets/images/LOGO-DARK.png" alt="logo">
 			</a>
 			<!-- Logo END -->
 
