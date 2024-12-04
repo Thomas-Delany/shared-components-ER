@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . '/../config.php';
-
 require_once CENTRAL_PATH . 'includes/functions.php';
 
 $index_data = load_json(__DIR__ . '/../data/pages/index.json');
