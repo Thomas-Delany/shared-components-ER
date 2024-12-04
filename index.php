@@ -124,8 +124,9 @@ $indexData = $index_data['sections'];
 
 								<div class="d-lg-flex align-items-center justify-content-center justify-content-lg-start pt-4 pt-lg-2">
 									<!-- Buttons -->
-									<a href="<?= htmlspecialchars($link['url']) ?>" class="btn btn-success btn-lg me-2 mb-4 mb-lg-0 w-75 w-xl-auto font-dosis fs-5 fw-bolder"><?= htmlspecialchars($link['label']) ?></a>
-									<a href="<?= htmlspecialchars($link['url']) ?>" class="btn btn-light border border-success btn-lg me-2 mb-4 mb-lg-0 w-75 w-xl-auto font-dosis fs-5 fw-bolder"><?= htmlspecialchars($link['label']) ?></a>
+									<?php foreach ($section['links'] as $link): ?>
+										<a href="<?= htmlspecialchars($link['url']) ?>" class="<?= htmlspecialchars($link['class']) ?>"><?= htmlspecialchars($link['label']) ?></a>
+									<?php endforeach; ?>
 								</div>
 							</div>
 							<!-- Left content END -->
