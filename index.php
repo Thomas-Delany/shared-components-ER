@@ -31,14 +31,14 @@ $indexData = $index_data['sections'];
 	<meta name="description" content="English courses">
 
 	<!-- Dark mode -->
-	<script src="<?php echo BASE_URL; ?>central/script.js"></script>
+	<script src="<?php echo BASE_URL; ?>script.js"></script>
 
 
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/fed40285ab.js" crossorigin="anonymous"></script>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="<?php echo BASE_URL; ?>central/assets/images/favicon_ER.png">
+	<link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/favicon_ER.png">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,7 +159,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/A1-new.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/A1-new.png"
 										alt="">
 								</a>
 							</div>
@@ -172,7 +172,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/A2-new.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/A2-new.png"
 										alt="c1 cambridge advanced">
 								</a>
 							</div>
@@ -185,7 +185,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/B1-new.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/B1-new.png"
 										alt="c2 cambridge proficiency">
 								</a>
 							</div>
@@ -198,7 +198,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/B2-new.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/B2-new.png"
 										alt="verbos en ingles">
 								</a>
 							</div>
@@ -211,7 +211,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/C1-new.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/C1-new.png"
 										alt="pronunciacion en inglés">
 								</a>
 							</div>
@@ -224,7 +224,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/C2-new.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/C2-new.png"
 										alt="gramatica esencial">
 								</a>
 							</div>
@@ -243,7 +243,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="https://cursos.englishreservoir.com/p/b2-cambridge-first">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/b2_first.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/b2_first.png"
 										alt="b2 cambridge first">
 								</a>
 							</div>
@@ -256,7 +256,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="https://cursos.englishreservoir.com/p/c1-cambridge-advanced">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/c1_advanced.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/c1_advanced.png"
 										alt="c1 cambridge advanced">
 								</a>
 							</div>
@@ -269,7 +269,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="https://cursos.englishreservoir.com/p/c2-cambridge-proficiency">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/c2_pro.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/c2_pro.png"
 										alt="c2 cambridge proficiency">
 								</a>
 							</div>
@@ -286,7 +286,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="https://cursos.englishreservoir.com/p/verbos-en-ingles-metodo-divertido">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/verbos-en-ingles.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/verbos-en-ingles.png"
 										alt="verbos en ingles">
 								</a>
 							</div>
@@ -299,7 +299,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="https://cursos.englishreservoir.com/p/pronunciacion-en-ingles">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/pronunciacion-en-ingles.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/pronunciacion-en-ingles.png"
 										alt="pronunciacion en inglés">
 								</a>
 							</div>
@@ -312,7 +312,7 @@ $indexData = $index_data['sections'];
 							<!-- Image -->
 							<div class="">
 								<a href="https://cursos.englishreservoir.com/p/gramatica-esencial-metodo-divertido">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>central/assets/images/courses/Gramatica-esencial.png"
+									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/Gramatica-esencial.png"
 										alt="gramatica esencial">
 								</a>
 							</div>
@@ -329,7 +329,7 @@ $indexData = $index_data['sections'];
 					<div class="col-lg-6 position-relative text-center order-2">
 
 						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>central/assets/images/element/29.svg" class="d-none d-lg-block" alt="position-relative">
+						<img src="<?php echo BASE_URL; ?>assets/images/element/29.svg" class="d-none d-lg-block" alt="position-relative">
 					</div>
 
 					<div class="col-lg-6 position-relative order-1 order-lg-2">
@@ -378,7 +378,7 @@ $indexData = $index_data['sections'];
 
 					<div class="col-lg-4 text-md-end text-center mx-auto d-none d-lg-block">
 						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>central/assets/images/element/10.svg" class="position-relative" alt="">
+						<img src="<?php echo BASE_URL; ?>assets/images/element/10.svg" class="position-relative" alt="">
 					</div>
 				</div>
 			</div>
@@ -391,7 +391,7 @@ $indexData = $index_data['sections'];
 				<div class="row g-4 g-lg-5 align-items-center">
 					<div class="col-lg-5 text-center order-2 d-none d-lg-block">
 						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>central/assets/images/element/category-1.svg" class="position-relative" alt="">
+						<img src="<?php echo BASE_URL; ?>assets/images/element/category-1.svg" class="position-relative" alt="">
 					</div>
 
 					<div class="col-lg-6 position-relative order-1 order-lg-2">
@@ -445,7 +445,7 @@ $indexData = $index_data['sections'];
 
 					<div class="col-md-4 text-md-end mx-auto text-center">
 						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>central/assets/images/element/instructor-course.svg" class="d-block mx-auto w-75 w-md-50 w-lg-25" alt="">
+						<img src="<?php echo BASE_URL; ?>assets/images/element/instructor-course.svg" class="d-block mx-auto w-75 w-md-50 w-lg-25" alt="">
 					</div>
 				</div>
 			</div>
@@ -458,7 +458,7 @@ $indexData = $index_data['sections'];
 				<div class="row g-4 g-lg-5">
 					<div class="col-lg-6 order-2 text-center mx-auto d-none d-lg-block position-relative">
 						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>central/assets/images/element/20.svg" class="img-fluid" alt="">
+						<img src="<?php echo BASE_URL; ?>assets/images/element/20.svg" class="img-fluid" alt="">
 					</div>
 
 					<div class="col-lg-5 position-relative mx-auto order-1 order-lg-2">
@@ -540,7 +540,7 @@ $indexData = $index_data['sections'];
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
 
 	<!-- Template Functions -->
-	<script src="<?php echo BASE_URL; ?>central/assets/js/functions.js"></script>
+	<script src="<?php echo BASE_URL; ?>assets/js/functions.js"></script>
 
 </body>
 
