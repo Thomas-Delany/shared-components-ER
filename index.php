@@ -66,7 +66,7 @@ $indexData = $index_data['sections'];
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 
 	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>central/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style.css">
 
 	<style>
 		@media (max-width: 768px) {
