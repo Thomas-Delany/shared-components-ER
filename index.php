@@ -1,3 +1,4 @@
+<pre><?php print_r($indexData); ?></pre>
 <?php
 require_once CENTRAL_PATH . 'includes/functions.php';
 
