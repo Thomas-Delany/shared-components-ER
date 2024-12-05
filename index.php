@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once CENTRAL_PATH . 'includes/functions.php';
 
 $index_data = load_json(__DIR__ . '/../data/pages/index.json');
@@ -7,8 +11,6 @@ $index_data = load_json(__DIR__ . '/../data/pages/index.json');
 $indexData = $index_data['sections'];
 
 ?>
-<pre>print_r($indexData);</pre>
-
 <!DOCTYPE html>
 <html lang="es">
 
