@@ -6,16 +6,6 @@ $index_data = load_json(__DIR__ . '/../data/pages/index.json');
 // JSON data includes
 $indexData = $index_data['sections'];
 
-$data = file_get_contents('/../data/pages/index.json');
-$decoded = json_decode($data, true);
-
-if (json_last_error() !== JSON_ERROR_NONE) {
-	echo 'JSON Error: ' . json_last_error_msg();
-} else {
-	echo '<pre>' . print_r($decoded, true) . '</pre>';
-}
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -131,7 +121,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 								</h1>
 
 								<!-- Content -->
-								<p class="d-none text-center d-lg-block font-dosis my-4 fs-4 fw-medium"><?= htmlspecialchars($section['paragraph']) ?></p>
+								<p class="d-none text-center d-lg-block font-dosis my-4 fs-4 fw-medium"><?= htmlspecialchars($section['title']['paragraph']) ?></p>
 
 								<div class="d-lg-flex align-items-center justify-content-center justify-content-lg-start pt-4 pt-lg-2">
 									<!-- Buttons -->
