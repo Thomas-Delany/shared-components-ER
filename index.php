@@ -6,6 +6,16 @@ $index_data = load_json(__DIR__ . '/../data/pages/index.json');
 // JSON data includes
 $indexData = $index_data['sections'];
 
+$data = file_get_contents('/../data/pages/index.json');
+$decoded = json_decode($data, true);
+
+if (json_last_error() !== JSON_ERROR_NONE) {
+	echo 'JSON Error: ' . json_last_error_msg();
+} else {
+	echo '<pre>' . print_r($decoded, true) . '</pre>';
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
