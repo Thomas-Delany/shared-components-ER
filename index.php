@@ -6,6 +6,10 @@ $index_data = load_json(__DIR__ . '/../data/pages/index.json');
 // JSON data includes
 $indexData = $index_data['sections'];
 
+$heroSection = array_filter($indexData, function ($section) {
+	return $section['type'] === 'hero';
+});
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -98,7 +102,7 @@ $indexData = $index_data['sections'];
 			<div class="container">
 				<!-- Title -->
 
-				<?php foreach ($indexData as $section): ?>
+				<?php foreach ($heroSection as $section): ?>
 					<div class="row align-items-center g-5">
 						<!-- Left content START -->
 						<?php if ($section['type'] === 'hero'): ?>
