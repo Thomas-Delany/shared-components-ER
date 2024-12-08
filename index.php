@@ -166,22 +166,20 @@ $gridSections = array_filter($indexData, function ($section) {
 		<!-- Listed courses START -->
 		<section class="position-relative pb-0 pb-sm-5 bg-success">
 			<div class="container">
-				echo '
-				<pre>' . print_r($gridSections, true) . '</pre>';
-
 				<?php foreach ($gridSections as $section): ?>
 					<div class="row g-4 pb-3">
+						<!-- Header -->
 						<div class="col-12 d-flex justify-content-center align-items-center">
-
-							<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100"><?= htmlspecialchars($section['heading']) ?></h2>
-
+							<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100">
+								<?= htmlspecialchars($section['heading']) ?>
+							</h2>
 						</div>
-						<!-- Item -->
+						<!-- Items -->
 						<?php foreach ($section['columns'] as $column): ?>
 							<div class="col-sm-6 col-md-4 col-xl-4">
 								<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
 									<!-- Image -->
-									<div class="">
+									<div>
 										<a href="<?= htmlspecialchars($column['url']) ?>">
 											<img class="rounded-2" src="<?= htmlspecialchars($column['image_path']) ?>"
 												alt="<?= htmlspecialchars($column['alt']) ?>">
@@ -194,6 +192,7 @@ $gridSections = array_filter($indexData, function ($section) {
 				<?php endforeach; ?>
 			</div>
 		</section>
+
 		<!-- Listed course END -->
 
 		<!-- Section 1 START -->
