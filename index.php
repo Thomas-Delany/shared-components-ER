@@ -17,7 +17,9 @@ $heroSection = array_filter($indexData, function ($section) {
 });
 
 // Render Grid section
-$gridSections = array_filter($indexData, fn($section) => $section['type'] === 'grid');
+$gridSections = array_filter($indexData, function ($section) {
+	return $section['type'] === 'grid';
+});
 
 ?>
 <!DOCTYPE html>
