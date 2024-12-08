@@ -166,6 +166,9 @@ $gridSections = array_filter($indexData, function ($section) {
 		<!-- Listed courses START -->
 		<section class="position-relative pb-0 pb-sm-5 bg-success">
 			<div class="container">
+				echo '
+				<pre>' . print_r($gridSections, true) . '</pre>';
+
 				<?php foreach ($gridSections as $section): ?>
 					<div class="row g-4 pb-3">
 						<div class="col-12 d-flex justify-content-center align-items-center">
