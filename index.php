@@ -6,9 +6,18 @@ $index_data = load_json(__DIR__ . '/../data/pages/index.json');
 // JSON data includes
 $indexData = $index_data['sections'];
 
+// Render Analytics Section
+foreach ($analyticsSection as $section) {
+	echo '<script src="' . htmlspecialchars($section['script']['src']) . '"></script>';
+}
+
+// Render Hero section
 $heroSection = array_filter($indexData, function ($section) {
 	return $section['type'] === 'hero';
 });
+
+// Render Grid section
+$gridSections = array_filter($indexData, fn($section) => $section['type'] === 'grid');
 
 ?>
 <!DOCTYPE html>
@@ -155,180 +164,33 @@ $heroSection = array_filter($indexData, function ($section) {
 		<!-- Listed courses START -->
 		<section class="position-relative pb-0 pb-sm-5 bg-success">
 			<div class="container">
+				<?php foreach ($gridSections as $section): ?>
+					<div class="row g-4 pb-3">
+						<div class="d-flex justify-content-center align-items-center">
 
-				<div class="row g-4 pb-3">
-					<div class="d-flex justify-content-center align-items-center">
-						<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100">Select your level</h2>
-					</div>
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/A1-new.png"
-										alt="">
-								</a>
-							</div>
+							<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100"><?= htmlspecialchars($section['heading']) ?></h2>
+
 						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/A2-new.png"
-										alt="c1 cambridge advanced">
-								</a>
+						<!-- Item -->
+						<?php foreach ($section['columns'] as $column): ?>
+							<div class="col-sm-6 col-md-4 col-xl-4">
+								<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+									<!-- Image -->
+									<div class="">
+										<a href="<?= htmlspecialchars($column['url']) ?>">
+											<img class="rounded-2" src="<?= htmlspecialchars($column['image_path']) ?>"
+												alt="<?= htmlspecialchars($column['alt']) ?>">
+										</a>
+									</div>
+								</div>
 							</div>
-						</div>
+						<?php endforeach; ?>
 					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/B1-new.png"
-										alt="c2 cambridge proficiency">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/B2-new.png"
-										alt="verbos en ingles">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/C1-new.png"
-										alt="pronunciacion en inglés">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="#">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/C2-new.png"
-										alt="gramatica esencial">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="d-flex justify-content-center align-items-center py-4 w-100">
-					<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100">Cambridge</h2>
-				</div>
-
-				<div class="row g-4">
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="https://cursos.englishreservoir.com/p/b2-cambridge-first">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/b2_first.png"
-										alt="b2 cambridge first">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="https://cursos.englishreservoir.com/p/c1-cambridge-advanced">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/c1_advanced.png"
-										alt="c1 cambridge advanced">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="https://cursos.englishreservoir.com/p/c2-cambridge-proficiency">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/c2_pro.png"
-										alt="c2 cambridge proficiency">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="d-flex justify-content-center align-items-center py-3 w-100">
-						<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100">Specialized</h2>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="https://cursos.englishreservoir.com/p/verbos-en-ingles-metodo-divertido">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/verbos-en-ingles.png"
-										alt="verbos en ingles">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="https://cursos.englishreservoir.com/p/pronunciacion-en-ingles">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/pronunciacion-en-ingles.png"
-										alt="pronunciacion en inglés">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item -->
-					<div class="col-sm-6 col-md-4 col-xl-4">
-						<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
-							<!-- Image -->
-							<div class="">
-								<a href="https://cursos.englishreservoir.com/p/gramatica-esencial-metodo-divertido">
-									<img class="rounded-2" src="<?php echo BASE_URL; ?>assets/images/courses/Gramatica-esencial.png"
-										alt="gramatica esencial">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Listed course END -->
+
 		<!-- Section 1 START -->
 		<section class="pb-0 pb-lg-5">
 			<div class="container">
