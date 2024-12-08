@@ -168,15 +168,14 @@ $gridSections = array_filter($indexData, function ($section) {
 			<div class="container">
 				<?php foreach ($gridSections as $section): ?>
 					<div class="row g-4 pb-3">
-						<div class="d-flex justify-content-center align-items-center">
-
-							<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100"><?= htmlspecialchars($section['heading']) ?></h2>
-
-						</div>
-						<!-- Item -->
 						<?php foreach ($section['columns'] as $column): ?>
+
+							<!-- Item -->
 							<div class="col-sm-6 col-md-4 col-xl-4">
 								<div class="bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+									<div class="d-flex justify-content-center align-items-center">
+										<h2 class="text-center text-white font-dosis fw-bold fs-1 w-100"><?= htmlspecialchars($section['heading']) ?></h2>
+									</div>
 									<!-- Image -->
 									<div class="">
 										<a href="<?= htmlspecialchars($column['url']) ?>">
