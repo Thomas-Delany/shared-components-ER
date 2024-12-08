@@ -21,6 +21,16 @@ $gridSections = array_filter($indexData, function ($section) {
 	return $section['type'] === 'grid';
 });
 
+// Render sections
+$section1 = array_filter($indexData, fn($section) => $section['type'] === 'Section-1');
+$section2 = array_filter($indexData, fn($section) => $section['type'] === 'Section-2');
+$section3 = array_filter($indexData, fn($section) => $section['type'] === 'Section-3');
+$section4 = array_filter($indexData, fn($section) => $section['type'] === 'Section-4');
+$section5 = array_filter($indexData, fn($section) => $section['type'] === 'Section-5');
+$section6 = array_filter($indexData, fn($section) => $section['type'] === 'Section-6');
+$section7 = array_filter($indexData, fn($section) => $section['type'] === 'Section-7');
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -200,41 +210,36 @@ $gridSections = array_filter($indexData, function ($section) {
 		<!-- Section 1 START -->
 		<section class="pb-0 pb-lg-5">
 			<div class="container">
-				<div class="row g-4 g-lg-5 align-items-center">
-					<div class="col-lg-6 position-relative text-center order-2">
+				<?php foreach ($section1 as $data): ?>
+					<div class="row g-4 g-lg-5 align-items-center">
+						<div class="col-lg-6 position-relative text-center order-2">
+							<!-- Image -->
+							<img src="<?= htmlspecialchars($data['image_path']) ?>" class="d-none d-lg-block" alt="<?= htmlspecialchars($data['alt']) ?>">
+						</div>
 
-						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>assets/images/element/29.svg" class="d-none d-lg-block" alt="position-relative">
-					</div>
-
-					<div class="col-lg-6 position-relative order-1 order-lg-2">
-						<!-- Title -->
-						<h2 class="font-dosis">A Fun Method</h2>
-						<p class="mb-2 font-dosis fs-5 fw-semibold">Our English courses are dynamic and interactive with quizzes to test your
-							knowlege.
-						</p>
-						<!-- Info list -->
-						<ul class="list-group list-group-borderless mb-2 font-dosis">
-							<li class="list-group-item d-flex align-items-center px-0">
-								<p class="mb-0 h6 fw-light"><i class="bi bi-arrow-right text-primary me-2"></i>Short,
-									goal-oriented video lessons.</p>
-							</li>
-							<li class="list-group-item d-flex align-items-center px-0">
-								<p class="mb-0 h6 fw-light"><i
-										class="bi bi-arrow-right text-primary me-2"></i>Interactives quizzes.</p>
-							</li>
-							<li class="list-group-item d-flex align-items-center px-0">
-								<p class="mb-0 h6 fw-light"><i class="bi bi-arrow-right text-primary me-2"></i>Effective
-									Method that works: Explanation - Context - Analysis.</p>
-							</li>
-						</ul>
-						<!-- Button -->
-						<div class="p-3">
-							<a href="https://cursos.englishreservoir.com/p/cursos-de-ingles-metodo-divertido"
-								class="btn btn-primary mb-0">Get started now!</a>
+						<div class="col-lg-6 position-relative order-1 order-lg-2">
+							<!-- Title -->
+							<h2 class="font-dosis"><?= htmlspecialchars($data['title']) ?></h2>
+							<p class="mb-2 font-dosis fs-5 fw-semibold"><?= htmlspecialchars($data['paragraphs'][0]) ?>
+							</p>
+							<!-- Info list -->
+							<ul class="list-group list-group-borderless mb-2 font-dosis">
+								<?php foreach ($data['paragraphs'] as $index => $paragraph): ?>
+									<?php if ($index > 0): ?>
+										<li class="list-group-item d-flex align-items-center px-0">
+											<p class="mb-0 h6 fw-light"><i class="bi bi-arrow-right text-primary me-2"></i><?= htmlspecialchars($paragraph) ?></p>
+										</li>
+									<?php endif; ?>
+								<?php endforeach; ?>
+							</ul>
+							<!-- Button -->
+							<div class="p-3">
+								<a href="<?= htmlspecialchars($data['url']) ?>"
+									class="btn btn-primary mb-0"><?= htmlspecialchars($data['label']) ?></a>
+							</div>
 						</div>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Section 1 END -->
