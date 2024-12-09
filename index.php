@@ -7,9 +7,7 @@ $index_data = load_json(__DIR__ . '/../data/pages/index.json');
 $indexData = $index_data['sections'];
 
 // Render Analytics Section
-foreach ($analyticsSection as $section) {
-	echo '<script src="' . htmlspecialchars($section['script']['src']) . '"></script>';
-}
+$analyticsSection = array_filter($indexData, fn($section) => $section['type'] === 'analytics');
 
 // Render Hero section
 $heroSection = array_filter($indexData, fn($section) => $section['type'] === 'hero');
@@ -31,16 +29,20 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 <html lang="es">
 
 <head>
+	<?php foreach ($analyticsSection as $section): ?>
+		<!-- Agnostic Google Analytics script -->
+		<script async src="<?= htmlspecialchars($section['script']['src']) ?>"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
 
-	<!-- Google tag (gtag.js) 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GBE5ZKC2K1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-  gtag('config', 'G-GBE5ZKC2K1');
-</script>-->
+			gtag('config', '<?= htmlspecialchars($section['script']['gtag_config']) ?>');
+		</script>
+	<?php endforeach; ?>
 
 	<title>English Reservoir - Cursos de Inglés</title>
 
