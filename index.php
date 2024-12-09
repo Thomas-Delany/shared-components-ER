@@ -332,25 +332,23 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 		<!-- Section 6 START -->
 		<section class="pb-0 pb-lg-5">
 			<div class="container">
-				<div class="row g-4 g-lg-5">
-					<div class="col-lg-6 order-2 text-center mx-auto d-none d-lg-block position-relative">
-						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>assets/images/element/20.svg" class="img-fluid" alt="">
-					</div>
+				<?php foreach ($section6 as $data): ?>
+					<div class="row g-4 g-lg-5">
+						<div class="col-lg-6 order-2 text-center mx-auto d-none d-lg-block position-relative">
+							<!-- Image -->
+							<img src="<?= htmlspecialchars($data['image_path']) ?>" class="img-fluid" alt="<?= htmlspecialchars($data['alt']) ?>">
+						</div>
 
-					<div class="col-lg-5 position-relative mx-auto order-1 order-lg-2">
-						<!-- Title -->
-						<h2 class="font-dosis">Method</h2>
-						<p class="mb-5 font-dosis fs-5 fw-semibold">Concise, dynamic, and example-based lessons to contextualize what you're
-							learning.
-						</p>
-						<h2 class="font-dosis">Native accents
-						</h2>
-						<p class="mb-2 font-dosis fs-5 fw-semibold">You will learn with different and diverse native accents: British,
-							Australian, Indian and American accents.
-						</p>
+						<div class="col-lg-5 position-relative mx-auto order-1 order-lg-2">
+							<!-- Title -->
+							<?php foreach ($titles as $index => $title): ?>
+								<h2 class="font-dosis"><?= htmlspecialchars($title) ?></h2>
+								<p class="mb-5 font-dosis fs-5 fw-semibold"><?= htmlspecialchars($paragraphs[$index]) ?>
+								</p>
+							<?php endforeach; ?>
+						</div>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Section 6 END -->
