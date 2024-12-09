@@ -264,21 +264,21 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 		<!-- Section 3 START -->
 		<section class="pb-0 pb-lg-5">
 			<div class="container">
-				<div class="row g-4 g-lg-5 align-items-center">
-					<div class="col-lg-5 text-center order-2 d-none d-lg-block">
-						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>assets/images/element/category-1.svg" class="position-relative" alt="">
-					</div>
+				<?php foreach ($section3 as $data): ?>
+					<div class="row g-4 g-lg-5 align-items-center">
+						<div class="col-lg-5 text-center order-2 d-none d-lg-block">
+							<!-- Image -->
+							<img src="<?= htmlspecialchars($data['image_path']) ?>" class="position-relative" alt="<?= htmlspecialchars($data['alt']) ?>">
+						</div>
 
-					<div class="col-lg-6 position-relative order-1 order-lg-2">
-						<!-- Title -->
-						<h2 class="font-dosis">Learn English with Efficacy and Structure</h2>
-						<p class="mb-2 font-dosis fs-5 fw-semibold">Whether it's English grammar, verbs, Pronunciation or the Cambridge Exams,
-							we've got you covered.
-							Step by step learning and everything all in one place.
-						</p>
+						<div class="col-lg-6 position-relative order-1 order-lg-2">
+							<!-- Title -->
+							<h2 class="font-dosis"><?= htmlspecialchars($data['title']) ?></h2>
+							<p class="mb-2 font-dosis fs-5 fw-semibold"><?= htmlspecialchars($data['paragraph']) ?>
+							</p>
+						</div>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Section 3 END -->
