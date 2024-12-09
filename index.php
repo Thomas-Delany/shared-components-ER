@@ -26,7 +26,6 @@ $section5 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 $section6 = array_filter($indexData, fn($section) => $section['type'] === 'Section-6');
 $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Section-7');
 
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -243,20 +242,21 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 		<!-- Section 2 START -->
 		<section class="overflow-hidden">
 			<div class="container">
-				<div class="row g-4 align-items-center">
-					<div class="col-lg-5 position-relative z-index-9 mx-auto">
-						<!-- Title -->
-						<h2 class="font-dosis">Communicate with the teachers!
-						</h2>
-						<p class="font-dosis fs-5 fw-semibold">No more isolation. Community based learning is key. Communicate with the
-							teachers in every lesson. Response time usally within 24 hours! </p>
-					</div>
+				<?php foreach ($section2 as $data): ?>
+					<div class="row g-4 align-items-center">
+						<div class="col-lg-5 position-relative z-index-9 mx-auto">
+							<!-- Title -->
+							<h2 class="font-dosis"><?= htmlspecialchars($data['title']) ?>
+							</h2>
+							<p class="font-dosis fs-5 fw-semibold"><?= htmlspecialchars($data['paragraph']) ?></p>
+						</div>
 
-					<div class="col-lg-4 text-md-end text-center mx-auto d-none d-lg-block">
-						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>assets/images/element/10.svg" class="position-relative" alt="">
+						<div class="col-lg-4 text-md-end text-center mx-auto d-none d-lg-block">
+							<!-- Image -->
+							<img src="<?= htmlspecialchars($data['image_path']) ?>" class="position-relative" alt="<?= htmlspecialchars($data['alt']) ?>">
+						</div>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Section 2 END -->
