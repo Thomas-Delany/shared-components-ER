@@ -357,39 +357,25 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 		<!-- Section 7 START -->
 		<section class="overflow-hidden">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12 mb-2 position-relative">
-						<!-- Title -->
-						<h2 class="text-center font-dosis">What is English Reservoir?</h2>
-					</div>
-					<div class="col-md-9 mx-auto">
-						<div class="row gx-5">
-							<!-- FIrst column paragraph -->
-							<div class="col-md-6">
-								<p class="font-dosis fs-5 fw-semibold">A “reservoir” is a large supply of something. That's exactly what we aim
-									to be here at English Reservoir: a reservoir of English courses, resources and
-									grammar for English learners.
-								</p>
-								<p class="font-dosis fs-5 fw-semibold">We specialize in the English language and our courses are adapted to
-									your needs.
-								</p>
-							</div>
-
-							<!-- Second column paragraph -->
-							<div class="col-md-6">
-								<p class="font-dosis fs-5 fw-semibold">It is important to us and our students that learning English is fun,
-									dynamic and interactive, and not boring. Therefore, we have designed our courses to
-									teach you everything you need to know, from essential grammar to verbs and the
-									Cambridge First exam.
-								</p>
-								<p class="font-dosis fs-5 fw-semibold">Everything is taught in an especially inductive way with context and
-									dialogue while we implement our instructional method: explanation - context -
-									analysis.
-								</p>
+				<?php foreach ($section7 as $data): ?>
+					<div class="row">
+						<div class="col-md-12 mb-2 position-relative">
+							<!-- Title -->
+							<h2 class="text-center font-dosis"><?= htmlspecialchars($data['title']) ?></h2>
+						</div>
+						<div class="col-md-9 mx-auto">
+							<div class="row gx-5">
+								<!-- FIrst column paragraph -->
+								<div class="col-md-6">
+									<?php foreach ($data['paragraphs'] as $index => $paragraph): ?>
+										<p class="font-dosis fs-5 fw-semibold"><?= htmlspecialchars($paragraph) ?>
+										</p>
+									<?php endforeach; ?>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Section 7 END -->
