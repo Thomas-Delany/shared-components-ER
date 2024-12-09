@@ -341,9 +341,9 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 
 						<div class="col-lg-5 position-relative mx-auto order-1 order-lg-2">
 							<!-- Title -->
-							<?php foreach ($titles as $index => $title): ?>
+							<?php foreach ($data['titles'] as $index => $title): ?>
 								<h2 class="font-dosis"><?= htmlspecialchars($title) ?></h2>
-								<p class="mb-5 font-dosis fs-5 fw-semibold"><?= htmlspecialchars($paragraphs[$index]) ?>
+								<p class="mb-5 font-dosis fs-5 fw-semibold"><?= htmlspecialchars($data['paragraphs'][$index]) ?>
 								</p>
 							<?php endforeach; ?>
 						</div>
