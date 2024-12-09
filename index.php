@@ -309,20 +309,22 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 		<!-- Section 5 START -->
 		<section class="overflow-hidden">
 			<div class="container">
-				<div class="row g-4 align-items-center">
-					<div class="col-md-5 position-relative mx-auto z-index-9">
-						<!-- Title -->
-						<h2 class="font-dosis">Short and fun lessons
-						</h2>
-						<p class="font-dosis fs-5 fw-semibold">Our English courses are fun, dynamic and most importantly: interactive. Every lesson teaches something new.
-						</p>
-					</div>
+				<?php foreach ($section5 as $data): ?>
+					<div class="row g-4 align-items-center">
+						<div class="col-md-5 position-relative mx-auto z-index-9">
+							<!-- Title -->
+							<h2 class="font-dosis"><?= htmlspecialchars($data['title']) ?>
+							</h2>
+							<p class="font-dosis fs-5 fw-semibold"><?= htmlspecialchars($data['paragraph']) ?>
+							</p>
+						</div>
 
-					<div class="col-md-4 text-md-end mx-auto text-center">
-						<!-- Image -->
-						<img src="<?php echo BASE_URL; ?>assets/images/element/instructor-course.svg" class="d-block mx-auto w-75 w-md-50 w-lg-25" alt="">
+						<div class="col-md-4 text-md-end mx-auto text-center">
+							<!-- Image -->
+							<img src="<?= htmlspecialchars($data['image_path']) ?>" class="d-block mx-auto w-75 w-md-50 w-lg-25" alt="<?= htmlspecialchars($data['alt']) ?>">
+						</div>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Section 5 END -->
