@@ -286,23 +286,22 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 		<!-- Section 4 START -->
 		<section class="pb-0 pb-lg-5">
 			<div class="container">
-				<div class="row text-center">
-					<div class="col-lg-12">
-						<h2 class="mb-5"><i class="fa-solid fa-shuttle-space fa-rotate-270 fa-2xl"
-								style="color: #00c699;"></i></h2>
-						<h2 class="mb-2 font-dosis">$7,99</h2>
-						<h3 class="mb-2 font-dosis">Per month</h3>
-						<div class="col-lg-6 mb-3 mx-auto text-center">
-							<p class="font-dosis fs-5 fw-semibold">Enjoy all of English Reservoir for a fixed monthly fee. Access all our
-								English courses in one place for 7,99 USD per month. There are no additional charges
-								or
-								contracts. You can stop whenever you want.
-							</p>
+				<?php foreach ($section4 as $data): ?>
+					<div class="row text-center">
+						<div class="col-lg-12">
+							<h2 class="mb-5"><i class="fa-solid fa-shuttle-space fa-rotate-270 fa-2xl"
+									style="color: #00c699;"></i></h2>
+							<h2 class="mb-2 font-dosis"><?= htmlspecialchars($data['title']) ?></h2>
+							<h3 class="mb-2 font-dosis"><?= htmlspecialchars($data['paragraphs'][0]) ?></h3>
+							<div class="col-lg-6 mb-3 mx-auto text-center">
+								<p class="font-dosis fs-5 fw-semibold"><?= htmlspecialchars($data['paragraphs'][1]) ?>
+								</p>
+							</div>
+							<!-- Button -->
+							<a href="<?= htmlspecialchars($data['url']) ?>" class="btn btn-md btn-primary me-2 mb-4 mb-sm-0"><?= htmlspecialchars($data['label']) ?></a>
 						</div>
-						<!-- Button -->
-						<a href="https://cursos.englishreservoir.com/p/cursos-de-ingles-metodo-divertido" class="btn btn-md btn-primary me-2 mb-4 mb-sm-0">Get Started</a>
 					</div>
-				</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 		<!-- Section 4 END -->
