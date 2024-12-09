@@ -367,7 +367,15 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 							<div class="row gx-5">
 								<!-- FIrst column paragraph -->
 								<div class="col-md-6">
-									<?php foreach ($data['paragraphs'] as $index => $paragraph): ?>
+									<?php foreach (array_slice($data['paragraphs'], 0, 2) as $paragraph): ?>
+										<p class="font-dosis fs-5 fw-semibold"><?= htmlspecialchars($paragraph) ?>
+										</p>
+									<?php endforeach; ?>
+								</div>
+
+								<!-- Second column paragraph -->
+								<div class="col-md-6">
+									<?php foreach (array_slice($data['paragraphs'], 2) as $paragraph): ?>
 										<p class="font-dosis fs-5 fw-semibold"><?= htmlspecialchars($paragraph) ?>
 										</p>
 									<?php endforeach; ?>
