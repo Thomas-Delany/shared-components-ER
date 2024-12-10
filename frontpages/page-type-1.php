@@ -334,7 +334,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     <img src="<?php echo BASE_URL; ?>assets/images/element/rocket.svg" alt="">
                 </div>
 
-                <div class="container position-relative py-5">
+                <div class="container position-relative py-5 <?= $index + 1 ?>">
                     <!-- Title -->
                     <div class="row">
                         <div class="col-lg-8 mb-4">
@@ -356,7 +356,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     </div>
                 </div>
 
-                <div class="container position-relative pt-1">
+                <div class="container position-relative pt-1 <?= $index + 1 ?>">
                     <!-- Title -->
                     <div class="row">
                         <div class="col-lg-8 mb-4">
@@ -378,7 +378,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     </div>
                 </div>
 
-                <div class="container position-relative pt-1">
+                <div class="container position-relative pt-1 <?= $index + 1 ?>">
                     <!-- Title -->
                     <div class="row">
                         <div class="col-lg-8 mb-4">
