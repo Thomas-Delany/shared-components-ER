@@ -83,8 +83,9 @@ $section1 = array_filter($pageSections, fn($section) => $section['type'] === 'se
         <section class="position-relative mt-5 pt-0 pt-lg-5">
             <div class="container">
                 <!-- Title -->
-                <div class="row">
-                    <?php foreach ($section1 as $data): ?>
+                <?php foreach ($section1 as $data): ?>
+                    <div class="row">
+
                         <!-- Title -->
                         <div class="col-md-6 mx-auto">
                             <h1 class="text-center mb-3"><?= htmlspecialchars($data['title']) ?></h1>
@@ -96,8 +97,9 @@ $section1 = array_filter($pageSections, fn($section) => $section['type'] === 'se
                         <div class="col-md-5 d-flex justify-content-center align-items-center">
                             <img src="<?php echo BASE_URL; ?>assets/images/element/08.png" class="" alt="<?= htmlspecialchars($data['alt']) ?>">
                         </div>
-                    <?php endforeach; ?>
-                </div>
+
+                    </div>
+                <?php endforeach; ?>
 
 
 
