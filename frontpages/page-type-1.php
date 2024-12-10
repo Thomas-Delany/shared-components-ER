@@ -79,7 +79,8 @@ $specificSection = array_filter($pageSections, fn($section) => $section['type'] 
 </head>
 
 <body>
-    <?php include __DIR__ . '/includes/nav.php'; ?>
+    <?php include CENTRAL_PATH . 'includes/nav.php'; ?>
+
     <!-- MAIN CONTENT START  -->
     <main>
         <section class="position-relative mt-5 pt-0 pt-lg-5">
