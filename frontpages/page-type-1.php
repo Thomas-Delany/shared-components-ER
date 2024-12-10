@@ -172,10 +172,10 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
             </div>
         </section>
 
+        <?php foreach ($section3 as $data): ?>
+            <?php foreach ($data['sections'] as $section): ?>
+                <section class="bg-light py-5 position-relative overflow-hidden">
 
-        <section class="bg-light py-5 position-relative overflow-hidden">
-            <?php foreach ($section3 as $data): ?>
-                <?php foreach ($data['sections'] as $section): ?>
                     <!-- SVG decoration -->
                     <figure class="position-absolute top-0 start-0">
                         <svg width="818.6px" height="235.1px">
@@ -400,9 +400,9 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                             <?php endforeach; ?>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                </section>
             <?php endforeach; ?>
-        </section>
+        <?php endforeach; ?>
 
         <!-- =======================
 Course END -->
