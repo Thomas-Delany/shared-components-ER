@@ -174,7 +174,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
 
 
         <section class="bg-light py-5 position-relative overflow-hidden">
-            <?php foreach ($section3 as $data): ?>
+            <?php foreach ($section3['sections'] as $data): ?>
                 <!-- SVG decoration -->
                 <figure class="position-absolute top-0 start-0">
                     <svg width="818.6px" height="235.1px">
