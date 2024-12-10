@@ -1,3 +1,18 @@
+<?php
+require_once CENTRAL_PATH . 'includes/functions.php';
+
+$page_data = load_json(__DIR__ . '/../../data/pages/page-type-1.json');
+
+// JSON data includes
+$pageSections = $page_data['sections'];
+
+// Render sections
+$specificSection = array_filter($pageSections, fn($section) => $section['type'] === 'specific');
+?>
+
+
+
+
 <!-- ABOUT US  PAGE -->
 
 <!DOCTYPE html>
@@ -5,18 +20,20 @@
 
 <head>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBE5ZKC2K1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <?php foreach ($analyticsSection as $section): ?>
+        <!-- Agnostic Google Analytics script -->
+        <script async src="<?= htmlspecialchars($section['script']['src']) ?>"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-        gtag('config', 'G-GBE5ZKC2K1');
-    </script>
+            gtag('config', '<?= htmlspecialchars($section['script']['gtag_config']) ?>');
+        </script>
+    <?php endforeach; ?>
 
     <title>About English Reservoir</title>
 
