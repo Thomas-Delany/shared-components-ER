@@ -7,11 +7,8 @@ $page_data = load_json(__DIR__ . '/../../data/pages/page-type-1.json');
 $pageSections = $page_data['sections'];
 
 // Render sections
-$specificSection = array_filter($pageSections, fn($section) => $section['type'] === 'specific');
+$section1 = array_filter($pageSections, fn($section) => $section['type'] === 'section-1');
 ?>
-
-
-
 
 <!-- ABOUT US  PAGE -->
 
@@ -87,21 +84,19 @@ $specificSection = array_filter($pageSections, fn($section) => $section['type'] 
             <div class="container">
                 <!-- Title -->
                 <div class="row">
-                    <!-- Title -->
-                    <div class="col-md-6 mx-auto">
-                        <h1 class="text-center mb-3">About English Reservoir</h1>
-                        <p class="lead">English Reservoir — a reservoir of English courses, resources, and grammar for
-                            English learners. We specialize in English, and our courses are tailored to your needs.
-                        </p>
-                        <p class="lead">Our English courses are fun, dynamic, and most importantly: interactive.</p>
-                        <p class="lead">It's important to our learners and us that learning English is fun, dynamic,
-                            interactive, and not dull. So, we've designed our courses to teach you everything you need
-                            to know from essential grammar to verbs to the Cambridge First exam.
-                        </p>
-                    </div>
-                    <div class="col-md-5 d-flex justify-content-center align-items-center">
-                        <img src="<?php echo BASE_URL; ?>assets/images/element/08.png" class="" alt="">
-                    </div>
+                    <?php foreach ($section1 as $data): ?>
+                        <!-- Title -->
+                        <div class="col-md-6 mx-auto">
+                            <h1 class="text-center mb-3"><?= htmlspecialchars($data['title']) ?></h1>
+                            <?php foreach ($data['paragraphs'] as $index => $paragraph): ?>
+                                <p class="lead"><?= htmlspecialchars($paragraph) ?>
+                                </p>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                            <img src="<?php echo BASE_URL; ?>assets/images/element/08.png" class="" alt="<?= htmlspecialchars($data['alt']) ?>">
+                        </div>
+                    <?php endforeach; ?>
                 </div>
 
 
