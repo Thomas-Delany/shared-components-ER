@@ -481,7 +481,7 @@ Portfolio START -->
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
     <!-- Footer START -->
-    <?php include __DIR__ . '/includes/footer.php'; ?>
+    <?php include CENTRAL_PATH . 'includes/footer.php'; ?>
     <!-- Footer END -->
 
     <!-- Back to top -->
