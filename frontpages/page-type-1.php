@@ -172,9 +172,9 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
             </div>
         </section>
 
-        <?php foreach ($section3 as $data): ?>
-            <section class="bg-light py-5 position-relative overflow-hidden">
 
+        <section class="bg-light py-5 position-relative overflow-hidden">
+            <?php foreach ($data['sections'] as $index => $section): ?>
                 <!-- SVG decoration -->
                 <figure class="position-absolute top-0 start-0">
                     <svg width="818.6px" height="235.1px">
@@ -338,12 +338,12 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     <!-- Title -->
                     <div class="row">
                         <div class="col-lg-8 mb-4">
-                            <h2><?= htmlspecialchars($data['heading-1']) ?></h2>
+                            <h2><?= htmlspecialchars($section['heading-1']) ?></h2>
                         </div>
                     </div>
                     <div class="row g-4 g-lg-5">
                         <!-- courses -->
-                        <?php foreach (array_slice($data['columns'], 0, 6) as $column): ?>
+                        <?php foreach (array_slice($section['columns'], 0, 6) as $column): ?>
                             <div class="col-sm-4 col-xl-4">
                                 <div class="text-center p-4 position-relative">
                                     <a href="<?= htmlspecialchars($column['url']) ?>">
@@ -360,12 +360,12 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     <!-- Title -->
                     <div class="row">
                         <div class="col-lg-8 mb-4">
-                            <h2><?= htmlspecialchars($data['heading-2']) ?></h2>
+                            <h2><?= htmlspecialchars($section['heading-2']) ?></h2>
                         </div>
                     </div>
                     <div class="row g-4 g-lg-5">
                         <!-- courses -->
-                        <?php foreach (array_slice($data['columns'], 6, 3) as $column): ?>
+                        <?php foreach (array_slice($section['columns'], 6, 3) as $column): ?>
                             <div class="col-sm-4 col-xl-4">
                                 <div class="text-center p-4 position-relative">
                                     <a href="<?= htmlspecialchars($column['url']) ?>">
@@ -382,12 +382,12 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     <!-- Title -->
                     <div class="row">
                         <div class="col-lg-8 mb-4">
-                            <h2><?= htmlspecialchars($data['heading-3']) ?></h2>
+                            <h2><?= htmlspecialchars($section['heading-3']) ?></h2>
                         </div>
                     </div>
                     <div class="row g-4 g-lg-5">
                         <!-- courses -->
-                        <?php foreach (array_slice($data['columns'], 9, 3) as $column): ?>
+                        <?php foreach (array_slice($section['columns'], 9, 3) as $column): ?>
                             <div class="col-sm-4 col-xl-4">
                                 <div class="text-center p-4 position-relative">
                                     <a href="<?= htmlspecialchars($column['url']) ?>">
@@ -399,9 +399,8 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         <?php endforeach; ?>
                     </div>
                 </div>
-
-            </section>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </section>
 
         <!-- =======================
 Course END -->
