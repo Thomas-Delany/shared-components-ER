@@ -355,7 +355,8 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                             <?php endforeach; ?>
                         </div>
                     </div>
-
+                <?php endforeach; ?>
+                <?php foreach ($data['sections'] as $section): ?>
                     <div class="container position-relative pt-1">
                         <!-- Title -->
                         <div class="row">
@@ -377,7 +378,8 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                             <?php endforeach; ?>
                         </div>
                     </div>
-
+                <?php endforeach; ?>
+                <?php foreach ($data['sections'] as $section): ?>
                     <div class="container position-relative pt-1">
                         <!-- Title -->
                         <div class="row">
