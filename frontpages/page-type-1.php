@@ -344,7 +344,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                         <div class="row g-4 g-lg-5">
                             <!-- courses -->
-                            <?php foreach (array_slice($section['columns'], 0, 6) as $column): ?>
+                            <?php foreach (array_slice($section['columns'], 0) as $column): ?>
                                 <div class="col-sm-4 col-xl-4">
                                     <div class="text-center p-4 position-relative">
                                         <a href="<?= htmlspecialchars($column['url']) ?>">
@@ -357,52 +357,8 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                     </div>
                 <?php endforeach; ?>
-                <?php foreach ($data['sections'] as $section): ?>
-                    <div class="container position-relative pt-1">
-                        <!-- Title -->
-                        <div class="row">
-                            <div class="col-lg-8 mb-4">
-                                <h2><?= htmlspecialchars($section['heading']) ?></h2>
-                            </div>
-                        </div>
-                        <div class="row g-4 g-lg-5">
-                            <!-- courses -->
-                            <?php foreach (array_slice($section['columns'], 6, 3) as $column): ?>
-                                <div class="col-sm-4 col-xl-4">
-                                    <div class="text-center p-4 position-relative">
-                                        <a href="<?= htmlspecialchars($column['url']) ?>">
-                                            <img src="<?= htmlspecialchars($column['image_path']) ?>" class="rounded-3"
-                                                alt="<?= htmlspecialchars($column['alt']) ?>">
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-                <?php foreach ($data['sections'] as $section): ?>
-                    <div class="container position-relative pt-1">
-                        <!-- Title -->
-                        <div class="row">
-                            <div class="col-lg-8 mb-4">
-                                <h2><?= htmlspecialchars($section['heading']) ?></h2>
-                            </div>
-                        </div>
-                        <div class="row g-4 g-lg-5">
-                            <!-- courses -->
-                            <?php foreach (array_slice($section['columns'], 9, 3) as $column): ?>
-                                <div class="col-sm-4 col-xl-4">
-                                    <div class="text-center p-4 position-relative">
-                                        <a href="<?= htmlspecialchars($column['url']) ?>">
-                                            <img src="<?= htmlspecialchars($column['image_path']) ?>" class="rounded-3"
-                                                alt="<?= htmlspecialchars($column['alt']) ?>">
-                                        </a>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+
+
             <?php endforeach; ?>
         </section>
 
