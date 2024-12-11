@@ -382,43 +382,20 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     </div>
                 <?php endforeach; ?>
 
-                <div class="row my-5">
-                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
-                        <img src="<?php echo BASE_URL; ?>assets/images/element/06.svg"
-                            class="img-fluid d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block" alt="">
+                <?php foreach ($section5 as $data): ?>
+                    <div class="row my-5">
+                        <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                            <img src="<?php echo BASE_URL; ?>assets/images/element/06.svg"
+                                class="img-fluid d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block" alt="">
+                        </div>
+                        <div class="col-lg-8 mb-4">
+                            <?php foreach ($data['titles'] as $index => $title): ?>
+                                <h3><?= htmlspecialchars($title) ?></h3>
+                                <p class="mb-4 fs-5"><?= htmlspecialchars($data['paragraphs'][$index]) ?></p>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
-                    <div class="col-lg-8 mb-4">
-                        <h3>Where is the course once I have bought it?
-                        </h3>
-                        <p class="mb-4 fs-5">
-                            <a href="https://sso.teachable.com/secure/528091/identity/login">Here! You can log in by
-                                clicking “log in”.</a>
-                        </p>
-                        <h3>Can I download the course?</h3>
-                        <p class="mb-4 fs-5">No. You can only stream your course from your unique login page.
-                        </p>
-                        <h3>Do the courses expire?
-                        </h3>
-                        <p class="mb-4 fs-5">For each month that you are subscribed, youll have one month of access.
-                        </p>
-                        <h3>Will I be able to follow the courses?
-                        </h3>
-                        <p class="mb-4 fs-5">If you have a medium level of English, you will be able to follow without
-                            difficulty.
-                        </p>
-                        <h3>How much time should I dedicate to the course(s)?
-                        </h3>
-                        <p class="mb-4 fs-5">As a general rule, you should do the tutorials every day, but don't do more
-                            than 20 minutes each day, because there is a lot of content, and you will need to
-                            concentrate.
-                        </p>
-                        <h3>Do I need to create an account?
-                        </h3>
-                        <p class="mb-4 fs-5">Yes. When you sign up, you will receive an email confirming your account.
-                            You'll have to create a new password that you can use to log in to your account.
-                        </p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
 
