@@ -367,7 +367,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                         <div class="row g-4 g-lg-5">
                             <!-- courses -->
-                            <?php foreach (array_slice($section['columns'], 0, 3) as $column): ?>
+                            <?php foreach (array_slice($section['columns'], 6, 3) as $column): ?>
                                 <div class="col-sm-4 col-xl-4">
                                     <div class="text-center p-4 position-relative">
                                         <a href="<?= htmlspecialchars($column['url']) ?>">
@@ -390,7 +390,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                         <div class="row g-4 g-lg-5">
                             <!-- courses -->
-                            <?php foreach (array_slice($section['columns'], 0, 3) as $column): ?>
+                            <?php foreach (array_slice($section['columns'], 9, 3) as $column): ?>
                                 <div class="col-sm-4 col-xl-4">
                                     <div class="text-center p-4 position-relative">
                                         <a href="<?= htmlspecialchars($column['url']) ?>">
