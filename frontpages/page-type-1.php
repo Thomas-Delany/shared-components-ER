@@ -360,33 +360,27 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
             <?php endforeach; ?>
         </section>
 
-        <!-- =======================
-Course END -->
+        <!-- Course END -->
 
-        <!-- =======================
-Portfolio START -->
+        <!-- Portfolio START -->
         <section>
             <div class="container">
                 <!-- Title -->
-                <div class="row">
-                    <div class="col-lg-8 my-5">
-                        <h3>How much does it cost?
-                        </h3>
-                        <p class="mb-4 fs-5">7,99 USD monthly.
-                        </p>
-                        <h3>Can I download the course?</h3>
-                        <p class="mb-4 fs-5">No. You can only stream your course from your unique login page.
-                        </p>
-                        <h3>In which language are the courses taught?
-                        </h3>
-                        <p class="mb-4 fs-5">
-                            In Spanish. That is, the language of instruction is Spanish. All the dialogues and context
-                            are in English with various native accents.</p>
+                <?php foreach ($section4 as $data): ?>
+                    <div class="row">
+                        <div class="col-lg-8 my-5">
+                            <?php foreach ($data['titles'] as $index => $title): ?>
+                                <h3><?= htmlspecialchars($title) ?>
+                                </h3>
+                                <p class="mb-4 fs-5"><?= htmlspecialchars($data['paragraphs'][$index]) ?>
+                                </p>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="col-lg-3 d-flex justify-content-center align-items-center">
+                            <img src="<?php echo BASE_URL; ?>assets/images/element/abc.svg" class="img-fluid" alt="">
+                        </div>
                     </div>
-                    <div class="col-lg-3 d-flex justify-content-center align-items-center">
-                        <img src="<?php echo BASE_URL; ?>assets/images/element/abc.svg" class="img-fluid" alt="">
-                    </div>
-                </div>
+                <?php endforeach; ?>
 
                 <div class="row my-5">
                     <div class="col-lg-3 d-flex justify-content-center align-items-center">
