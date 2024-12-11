@@ -344,7 +344,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                         <div class="row g-4 g-lg-5">
                             <!-- courses -->
-                            <?php foreach (array_slice($section['columns'], 0) as $column): ?>
+                            <?php foreach ($section['columns'] as $column): ?>
                                 <div class="col-sm-4 col-xl-4">
                                     <div class="text-center p-4 position-relative">
                                         <a href="<?= htmlspecialchars($column['url']) ?>">
@@ -357,8 +357,6 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-
             <?php endforeach; ?>
         </section>
 
