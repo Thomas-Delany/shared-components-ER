@@ -341,8 +341,6 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                 <h2>
                                     <?= htmlspecialchars(
                                         $section['heading-1'] ??
-                                            $section['heading-2'] ??
-                                            $section['heading-3'] ??
                                             'No Heading'
                                     ) ?>
                                 </h2>
@@ -369,9 +367,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                             <div class="col-lg-8 mb-4">
                                 <h2>
                                     <?= htmlspecialchars(
-                                        $section['heading-1'] ??
-                                            $section['heading-2'] ??
-                                            $section['heading-3'] ??
+                                        $section['heading-2'] ??
                                             'No Heading'
                                     ) ?>
                                 </h2>
@@ -398,9 +394,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                             <div class="col-lg-8 mb-4">
                                 <h2>
                                     <?= htmlspecialchars(
-                                        $section['heading-1'] ??
-                                            $section['heading-2'] ??
-                                            $section['heading-3'] ??
+                                        $section['heading-3'] ??
                                             'No Heading'
                                     ) ?>
                                 </h2>
