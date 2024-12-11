@@ -338,7 +338,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         <!-- Title -->
                         <div class="row">
                             <div class="col-lg-8 mb-4">
-                                <h2><?= htmlspecialchars($section['heading']) ?></h2>
+                                <h2><?= htmlspecialchars($section['heading'][0]) ?></h2>
                             </div>
                         </div>
                         <div class="row g-4 g-lg-5">
@@ -361,7 +361,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         <!-- Title -->
                         <div class="row">
                             <div class="col-lg-8 mb-4">
-                                <h2><?= htmlspecialchars($section['heading']) ?></h2>
+                                <h2><?= htmlspecialchars($section['heading'][1]) ?></h2>
                             </div>
                         </div>
                         <div class="row g-4 g-lg-5">
@@ -384,7 +384,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         <!-- Title -->
                         <div class="row">
                             <div class="col-lg-8 mb-4">
-                                <h2><?= htmlspecialchars($section['heading']) ?></h2>
+                                <h2><?= htmlspecialchars($section['heading'][2]) ?></h2>
                             </div>
                         </div>
                         <div class="row g-4 g-lg-5">
