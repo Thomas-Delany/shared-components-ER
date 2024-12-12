@@ -1,22 +1,39 @@
+<?php
+require_once CENTRAL_PATH . 'includes/functions.php';
+
+$page_data = load_json(__DIR__ . '/../../data/pages/page-type-3.json');
+
+// JSON data includes
+$pageSections = $page_data['sections'];
+
+// Render sections
+$section1 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-1');
+$section2 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-2');
+$section3 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-3');
+$section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-4');
+$section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-5');
+?>
+
 <!-- AFFILIATE PAGE -->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <?php foreach ($analyticsSection as $section): ?>
+        <!-- Agnostic Google Analytics script -->
+        <script async src="<?= htmlspecialchars($section['script']['src']) ?>"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBE5ZKC2K1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-GBE5ZKC2K1');
-    </script>
+            gtag('config', '<?= htmlspecialchars($section['script']['gtag_config']) ?>');
+        </script>
+    <?php endforeach; ?>
 
     <title>Affiliate Programme - English Reservoir</title>
 
@@ -63,7 +80,7 @@
 </head>
 
 <body>
-    <?php include __DIR__ . '/includes/nav.php'; ?>
+    <?php include CENTRAL_PATH . 'includes/nav.php'; ?>
     <!-- **************** MAIN CONTENT START **************** -->
     <main>
 
@@ -522,7 +539,7 @@
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
     <!-- Footer START -->
-    <?php include __DIR__ . '/includes/footer.php'; ?>
+    <?php include CENTRAL_PATH . 'includes/nav.php'; ?>
     <!-- Footer END -->
 
     <!-- Back to top -->
