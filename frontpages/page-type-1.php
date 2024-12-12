@@ -126,7 +126,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                     <img src="<?php echo BASE_URL; ?>assets/images/element/26.svg" alt="">
                                 </div>
                                 <!-- Title -->
-                                <h3><?= htmlspecialchars($data['titles'][0]) ?></h3>
+                                <h3><?= htmlspecialchars($data['titles']['0']) ?></h3>
                                 <p class="lead"><?= htmlspecialchars($data['paragraphs'][0]) ?>">
                                 </p>
                             </div>
@@ -348,7 +348,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                 <div class="col-sm-4 col-xl-4">
                                     <div class="text-center p-4 position-relative">
                                         <a href="<?= htmlspecialchars($column['url']) ?>">
-                                            <img src="<?php echo BASE_URL; ?><?= htmlspecialchars($column['image_path']) ?>" class="rounded-3"
+                                            <img src="<?= htmlspecialchars($column['image_path']) ?>" class="rounded-3"
                                                 alt="<?= htmlspecialchars($column['alt']) ?>">
                                         </a>
                                     </div>
@@ -391,7 +391,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         <div class="col-lg-8 mb-4">
                             <?php foreach ($data['titles'] as $index => $title): ?>
                                 <h3><?= htmlspecialchars($title) ?></h3>
-                                <p class="mb-4 fs-5"><?= htmlspecialchars($data['paragraphs'][$index]) ?></p>
+                                <p class="mb-4 fs-5"><?= htmlspecialchars($data['paragraphs'][$index]) ?> </p>
                             <?php endforeach; ?>
                         </div>
                     </div>
