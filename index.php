@@ -190,7 +190,7 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 										<!-- Image -->
 										<div class="">
 											<a href="<?= htmlspecialchars($column['url']) ?>">
-												<img class="rounded-2" src="<?= htmlspecialchars($column['image_path']) ?>"
+												<img class="rounded-2" src="<?php echo BASE_URL; ?><?= htmlspecialchars($column['image_path']) ?>"
 													alt="<?= htmlspecialchars($column['alt']) ?>">
 											</a>
 										</div>
@@ -211,7 +211,7 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 					<div class="row g-4 g-lg-5 align-items-center">
 						<div class="col-lg-6 position-relative text-center order-2">
 							<!-- Image -->
-							<img src="<?= htmlspecialchars($data['image_path']) ?>" class="d-none d-lg-block" alt="<?= htmlspecialchars($data['alt']) ?>">
+							<img src="<?php echo BASE_URL; ?><?= htmlspecialchars($data['image_path']) ?>" class="d-none d-lg-block" alt="<?= htmlspecialchars($data['alt']) ?>">
 						</div>
 
 						<div class="col-lg-6 position-relative order-1 order-lg-2">
@@ -255,7 +255,7 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 
 						<div class="col-lg-4 text-md-end text-center mx-auto d-none d-lg-block">
 							<!-- Image -->
-							<img src="<?= htmlspecialchars($data['image_path']) ?>" class="position-relative" alt="<?= htmlspecialchars($data['alt']) ?>">
+							<img src="<?php echo BASE_URL; ?><?= htmlspecialchars($data['image_path']) ?>" class="position-relative" alt="<?= htmlspecialchars($data['alt']) ?>">
 						</div>
 					</div>
 				<?php endforeach; ?>
