@@ -223,44 +223,20 @@ Main Banner START -->
                 <!-- Steps END -->
 
                 <!-- Title -->
-                <div class="row">
-                    <!-- Title -->
-                    <div class="col-md-6 my-5">
-                        <h3 class="mb-3">Method English Reservoir</h3>
-                        <p class="lead">
-                            Our <a
-                                href="https://cursos.englishreservoir.com/p/cursos-de-ingles-metodo-divertido">English
-                                courses</a> are dynamic and interactive with a mix of video and quiz
-                            content.
-                        </p>
-                        <h3 class="mt-5">Do I need to start the courses from the beginning?
-                        </h3>
-                        <p class="lead">
-                            No. It is not necessary to treat the tutorials as a novel. Maybe you have problems with the
-                            modal auxiliary verb can or shall.
-                        </p>
-                        <p class="lead">
-                            Or it may be that you are not quite sure how the <a
-                                href="https://www.englishreservoir.com/all-passive-forms/">passive voice</a> works in
-                            English. You should
-                            feel free to use the tutorials as you wish.
-                        </p>
-                        <h3 class="mt-5">What are the small numbers (474)?
-                        </h3>
-                        <p class="lead">
-                            These small numbers (superscripts) are inserted within the “context” section and will be
-                            developed later in the “analysis” section.
-                        </p>
-                        <p class="lead">
-                            These little numbers are used to outline and dig deeper into difficult points, such as
-                            idioms, <a href="https://www.englishreservoir.com/phrasal-verbs/">phrasal verbs</a>,
-                            expressions, etc., within the “context” section.
-                        </p>
+                <?php foreach ($section3 as $data): ?>
+                    <div class="row">
+                        <!-- Title -->
+                        <div class="col-md-6 my-5">
+                            <?php foreach ($data['titles'] as $index => $title): ?>
+                                <h3 class="mb-3 mt-5"><?= htmlspecialchars($title) ?></h3>
+                                <p class="lead"><?= htmlspecialchars($data['paragraphs'][$index]) ?></p>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                            <img src="<?php echo BASE_URL; ?>assets/images/element/category-1.svg" class="img-fluid" alt="">
+                        </div>
                     </div>
-                    <div class="col-md-5 d-flex justify-content-center align-items-center">
-                        <img src="<?php echo BASE_URL; ?>assets/images/element/category-1.svg" class="img-fluid" alt="">
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
 
