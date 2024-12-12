@@ -348,7 +348,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                 <div class="col-sm-4 col-xl-4">
                                     <div class="text-center p-4 position-relative">
                                         <a href="<?= htmlspecialchars($column['url']) ?>">
-                                            <img src="<?= htmlspecialchars($column['image_path']) ?>" class="rounded-3"
+                                            <img src="<?php echo BASE_URL; ?><?= htmlspecialchars($column['image_path']) ?>" class="rounded-3"
                                                 alt="<?= htmlspecialchars($column['alt']) ?>">
                                         </a>
                                     </div>
