@@ -7,6 +7,7 @@ $page_data = load_json(__DIR__ . '/../../data/pages/page-type-1.json');
 $pageSections = $page_data['sections'];
 
 // Render sections
+$analyticsSection = array_filter($indexData, fn($section) => $section['type'] === 'analytics');
 $section1 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-1');
 $section2 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-2');
 $section3 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-3');

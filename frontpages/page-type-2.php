@@ -7,6 +7,7 @@ $page_data = load_json(__DIR__ . '/../../data/pages/page-type-2.json');
 $pageSections = $page_data['sections'];
 
 // Render sections
+$analyticsSection = array_filter($indexData, fn($section) => $section['type'] === 'analytics');
 $section1 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-1');
 $section2 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-2');
 $section3 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-3');
@@ -18,19 +19,20 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
 <html lang="en">
 
 <head>
+    <?php foreach ($analyticsSection as $section): ?>
+        <!-- Agnostic Google Analytics script -->
+        <script async src="<?= htmlspecialchars($section['script']['src']) ?>"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBE5ZKC2K1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-GBE5ZKC2K1');
-    </script>
+            gtag('config', '<?= htmlspecialchars($section['script']['gtag_config']) ?>');
+        </script>
+    <?php endforeach; ?>
 
     <title>Method English Reservoir</title>
 
@@ -118,37 +120,39 @@ Main Banner START -->
             <div class="container">
                 <div class="row">
                     <!-- Title -->
-                    <div class="col-lg-8 mb-2 mb-lg-4 position-relative">
+                    <?php foreach ($section1 as $data): ?>
+                        <div class="col-lg-8 mb-2 mb-lg-4 position-relative">
 
-                        <!-- Svg decoration -->
-                        <figure class="position-absolute top-0 start-0 translate-middle ms-n5 d-none d-md-block">
-                            <svg class="fill-orange" width="114px" height="140px" viewBox="0 0 114 140">
-                                <path
-                                    d="M67.6,6.2c0.8-0.5,7.2,7.6,14.2,18c7.1,10.2,14.7,22.7,18.9,30c8.3,14.7,13.2,27.5,11.4,28.5 c-1.9,1-9.6-10.2-17.9-24.9c-4.2-7.3-11.1-20.1-16.9-31C71.4,15.9,66.7,6.7,67.6,6.2z" />
-                                <path
-                                    d="M85,89c-0.8,0.7-4.6-2.2-9.2-5.5c-4.6-3.2-10.1-6.8-13.1-8.8c-6.1-4.2-10.9-8.2-10-10.2 c0.8-1.8,7.5-0.6,14.2,3.8c3.4,2.1,8.7,6.7,12.6,11.2C83.3,84,85.7,88.3,85,89z" />
-                                <path
-                                    d="M73.1,114.7c0,1.1-8.5,1.8-18.8,2.1c-10.2,0.3-22.2-0.2-29.1-0.8c-13.8-1.2-24.7-4.4-24.4-6.4 c0.3-2.1,11.5-2.3,25.1-1.1c6.8,0.6,18.5,1.9,28.6,3C64.7,112.7,73.1,113.8,73.1,114.7z" />
-                            </svg>
-                        </figure>
-                        <!-- Title -->
-                        <h1 class="display-4 mb-3 mb-lg-0">Method English Reservoir</h1>
-                    </div>
+                            <!-- Svg decoration -->
+                            <figure class="position-absolute top-0 start-0 translate-middle ms-n5 d-none d-md-block">
+                                <svg class="fill-orange" width="114px" height="140px" viewBox="0 0 114 140">
+                                    <path
+                                        d="M67.6,6.2c0.8-0.5,7.2,7.6,14.2,18c7.1,10.2,14.7,22.7,18.9,30c8.3,14.7,13.2,27.5,11.4,28.5 c-1.9,1-9.6-10.2-17.9-24.9c-4.2-7.3-11.1-20.1-16.9-31C71.4,15.9,66.7,6.7,67.6,6.2z" />
+                                    <path
+                                        d="M85,89c-0.8,0.7-4.6-2.2-9.2-5.5c-4.6-3.2-10.1-6.8-13.1-8.8c-6.1-4.2-10.9-8.2-10-10.2 c0.8-1.8,7.5-0.6,14.2,3.8c3.4,2.1,8.7,6.7,12.6,11.2C83.3,84,85.7,88.3,85,89z" />
+                                    <path
+                                        d="M73.1,114.7c0,1.1-8.5,1.8-18.8,2.1c-10.2,0.3-22.2-0.2-29.1-0.8c-13.8-1.2-24.7-4.4-24.4-6.4 c0.3-2.1,11.5-2.3,25.1-1.1c6.8,0.6,18.5,1.9,28.6,3C64.7,112.7,73.1,113.8,73.1,114.7z" />
+                                </svg>
+                            </figure>
+                            <!-- Title -->
+                            <h1 class="display-4 mb-3 mb-lg-0"><?= htmlspecialchars($data['title']) ?></h1>
+                        </div>
 
-                    <!-- Info and buttons -->
-                    <div class="col-lg-5 mb-4 mb-lg-0">
-                        <p class="mb-4 fs-4">Learn all about Method English Reservoir!</p>
-                    </div>
+                        <!-- Info and buttons -->
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <p class="mb-4 fs-4"><?= htmlspecialchars($data['paragraph']) ?></p>
+                        </div>
 
-                    <!-- Image -->
-                    <div class="col-lg-7">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <div class="d-flex justify-content-center align-items-center">
-                                <img src="<?php echo BASE_URL; ?>assets/images/element/10.svg" class="img-fluid">
+                        <!-- Image -->
+                        <div class="col-lg-7">
+                            <div class="position-relative">
+                                <!-- Image -->
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img src="<?php echo BASE_URL; ?>assets/images/element/10.svg" class="img-fluid">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
