@@ -229,9 +229,9 @@ Main Banner START -->
                         <div class="col-md-6 my-5">
                             <?php foreach ($data['titles'] as $title): ?>
                                 <h3 class="mb-3 mt-5"><?= htmlspecialchars($title['header']) ?></h3>
-                                <?php foreach ($title['paragraphs'] as $paragraph): ?>
-                                    <p class="lead"><?= htmlspecialchars($paragraph) ?></p>
-                                <?php endforeach; ?>
+
+                                <p class="lead"><?= htmlspecialchars($title['paragraphs']) ?></p>
+
                             <?php endforeach; ?>
                         </div>
                         <div class="col-md-5 d-flex justify-content-center align-items-center">
