@@ -158,7 +158,7 @@ $section7 = array_filter($indexData, fn($section) => $section['type'] === 'Secti
 							<div class="d-none d-lg-block col-lg-5 col-xl-5 text-center mx-auto position-relative pt-md-5">
 								<!-- Image -->
 								<div class="text-end">
-									<img src="<?= htmlspecialchars($section['title']['image_path']) ?>" class="w-75 text-end" alt="cursos de ingles">
+									<img src="<?php echo BASE_URL; ?><?= htmlspecialchars($section['title']['image_path']) ?>" class="w-75 text-end" alt="cursos de ingles">
 								</div>
 							</div>
 							<!-- Right content END -->
