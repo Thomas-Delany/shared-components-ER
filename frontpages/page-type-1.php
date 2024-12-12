@@ -126,7 +126,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                     <img src="<?php echo BASE_URL; ?>assets/images/element/26.svg" alt="">
                                 </div>
                                 <!-- Title -->
-                                <h3><?= htmlspecialchars($data['titles']['0']) ?></h3>
+                                <h3><?= htmlspecialchars($data['titles'][0]) ?></h3>
                                 <p class="lead"><?= htmlspecialchars($data['paragraphs'][0]) ?>">
                                 </p>
                             </div>
