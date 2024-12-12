@@ -224,22 +224,20 @@ Main Banner START -->
 
                 <!-- Title -->
                 <?php foreach ($section3 as $data): ?>
-                    <?php if ($data['type'] === 'section-3'): ?>
-                        <div class="row">
-                            <!-- Title -->
-                            <div class="col-md-6 my-5">
-                                <?php foreach ($data['titles'] as $title): ?>
-                                    <h3 class="mb-3 mt-5"><?= htmlspecialchars($title['header']) ?></h3>
-                                    <?php foreach ($title['paragraphs'] as $paragraph): ?>
-                                        <p class="lead"><?= htmlspecialchars($paragraph) ?></p>
-                                    <?php endforeach; ?>
-                                <?php endforeach; ?>
-                            </div>
-                            <div class="col-md-5 d-flex justify-content-center align-items-center">
-                                <img src="<?php echo BASE_URL; ?>assets/images/element/category-1.svg" class="img-fluid" alt="<?= htmlspecialchars($data['alt']) ?>">
-                            </div>
+                    <div class="row">
+                        <!-- Title -->
+                        <div class="col-md-6 my-5">
+                            <?php foreach ($data['titles'] as $index => $title): ?>
+                                <h3 class="mb-3 mt-5"><?= htmlspecialchars($title['header']) ?></h3>
+
+                                <p class="lead"><?= htmlspecialchars($data['paragraphs'][$index]) ?></p>
+
+                            <?php endforeach; ?>
                         </div>
-                    <?php endif; ?>
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                            <img src="<?php echo BASE_URL; ?>assets/images/element/category-1.svg" class="img-fluid" alt="<?= htmlspecialchars($data['alt']) ?>">
+                        </div>
+                    </div>
                 <?php endforeach; ?>
             </div>
         </section>
