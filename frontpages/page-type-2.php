@@ -262,65 +262,35 @@ Main Banner START -->
                 </svg>
             </figure>
 
-            <div class="container position-relative py-5"
-                style="background-image:url(assets/images/element/map.svg); background-position: center left; background-size: cover;">
-                <!-- Top country START -->
-                <div class="row g-4">
-                    <div class="col-xl-3 d-flex justify-content-center align-items-center">
-                        <h2 class="h1 mb-0">Courses in your Bundle</h2>
-                    </div>
-                    <div class="col-xl-9">
+            <?php foreach ($section4 as $data): ?>
+                <?php foreach ($data['sections'] as $section): ?>
+                    <div class="container position-relative py-5"
+                        style="background-image:url(assets/images/element/map.svg); background-position: center left; background-size: cover;">
+                        <!-- Top country START -->
                         <div class="row g-4">
-                            <!-- Country item -->
-                            <div class="col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/courses/b2_first.png" class="img-fluid rounded-3" alt="">
-                                </div>
-
+                            <div class="col-xl-3 d-flex justify-content-center align-items-center">
+                                <h2 class="h1 mb-0">
+                                    <h2><?= htmlspecialchars($section['heading']) ?></h2>
                             </div>
-
-                            <!-- Country item -->
-                            <div class="col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/courses/c1_advanced.png" class="img-fluid rounded-3" alt="">
-                                </div>
+                            <div class="col-xl-9">
+                                <div class="row g-4">
+                                    <!-- Country item -->
+                                    <?php foreach ($section['columns'] as $column): ?>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="d-flex align-items-center">
+                                                <a href="<?= htmlspecialchars($column['url']) ?>">
+                                                    <img src="<?php echo BASE_URL; ?><?= htmlspecialchars($column['image_path']) ?>" class="img-fluid rounded-3" alt="<?= htmlspecialchars($column['alt']) ?>">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div> <!-- Row END -->
                             </div>
-
-                            <!-- Country item -->
-                            <div class="col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/courses/c2_pro.png" class="img-fluid rounded-3" alt="">
-                                </div>
-                            </div>
-
-                            <!-- Country item -->
-                            <div class="col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/courses/verbos-en-ingles.png" class="img-fluid rounded-3"
-                                        alt="">
-                                </div>
-                            </div>
-
-                            <!-- Country item -->
-                            <div class="col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/courses/Gramatica-esencial.png" class="img-fluid rounded-3"
-                                        alt="">
-                                </div>
-                            </div>
-
-                            <!-- Country item -->
-                            <div class="col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/courses/pronunciacion-en-ingles.png"
-                                        class="img-fluid rounded-3" alt="">
-                                </div>
-                            </div>
-                        </div> <!-- Row END -->
+                        </div>
+                        <!-- Top country END -->
                     </div>
-                </div>
-                <!-- Top country END -->
-            </div>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
         </section>
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
