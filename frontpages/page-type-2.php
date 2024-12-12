@@ -1,6 +1,19 @@
+<?php
+require_once CENTRAL_PATH . 'includes/functions.php';
+
+$page_data = load_json(__DIR__ . '/../../data/pages/page-type-2.json');
+
+// JSON data includes
+$pageSections = $page_data['sections'];
+
+// Render sections
+$section1 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-1');
+$section2 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-2');
+$section3 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-3');
+$section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-4');
+?>
+
 <!-- METHOD PAGE -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +82,7 @@
 </head>
 
 <body>
-    <?php include __DIR__ . '/includes/nav.php'; ?>
+    <?php include CENTRAL_PATH . 'includes/nav.php'; ?>
     <!-- **************** MAIN CONTENT START **************** -->
     <main>
 
@@ -334,7 +347,7 @@ Main Banner START -->
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
     <!-- Footer START -->
-    <?php include __DIR__ . '/includes/footer.php'; ?>
+    <?php include CENTRAL_PATH . 'includes/footer.php'; ?>
     <!-- Footer END -->
 
     <!-- Back to top -->
