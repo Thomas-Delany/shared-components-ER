@@ -131,7 +131,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     <div class="row">
                         <div class="col-md-12 mb-2 position-relative">
                             <!-- Title -->
-                            <h2 class="text-center"><? htmlspecialchars($data['title']) ?></h2>
+                            <h2 class="text-center"><?= htmlspecialchars($data['title']) ?></h2>
                         </div>
                         <div class="col-md-9 mx-auto">
                             <div class="row gx-5">
