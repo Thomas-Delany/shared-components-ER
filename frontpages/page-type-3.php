@@ -165,23 +165,20 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                             <h2 class="m-2 p-1"><?= htmlspecialchars($data['titles'][0]) ?></h2>
                         </div>
                         <div class="row align-items-center mx-auto">
-                            <div class="col-sm-7 mx-auto mb-3">
-                                <!-- Titles -->
-                                <?php foreach (array_slice($data['titles'], 1) as $index => $title): ?>
+                            <?php foreach (array_slice($data['titles'], 1) as $index => $title): ?>
+                                <div class="col-sm-7 mx-auto mb-3">
+                                    <!-- Titles -->
                                     <h2><?= htmlspecialchars($title) ?></h2>
                                     <!-- Paragraphs -->
                                     <p class="lead"><?= htmlspecialchars($data['paragraphs'][$index]) ?></p>
-                                <?php endforeach; ?>
-
-
-                            </div>
-
-                            <div class="col-sm-2 text-center mx-auto">
-                                <!-- Icon -->
-                                <h1>
-                                    <i class="<?= htmlspecialchars($data['icon_classes']) ?>" style="color: #FFD43B;"></i>
-                                </h1>
-                            </div>
+                                </div>
+                                <div class="col-sm-2 text-center mx-auto">
+                                    <!-- Icon -->
+                                    <h1>
+                                        <i class="<?= htmlspecialchars($data['icon_classes'][$index]) ?>" style="color: #FFD43B;"></i>
+                                    </h1>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
