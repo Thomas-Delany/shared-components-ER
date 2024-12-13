@@ -158,116 +158,30 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
         <!-- Section 5 START -->
         <section class="position-relative overflow-hidden pt-5 pt-lg-3">
             <div class="container">
-                <div class="row g-4 align-items-center mx-auto">
-                    <div class="col-sm-8 mx-auto text-center position-relative bg-warning bg-gradient rounded-3 mb-5">
-                        <!-- Main Title -->
-                        <h2 class="m-2 p-1">Get to Know our Affiliate Programme</h2>
-                    </div>
-                    <div class="row align-items-center mx-auto">
-                        <div class="col-sm-7 mx-auto mb-3">
-                            <!-- Title -->
-                            <h2>Affiliate Dashboard
-                            </h2>
-                            <p class="lead">First things first! Get signed up to your Affiliate Dashboard so you can
-                                obseve everything from the courses you will be promoting, your payout status, affiliate
-                                links, and most importantly - your Sales.
-                            </p>
+                <?php foreach ($section3 as $data): ?>
+                    <div class="row g-4 align-items-center mx-auto">
+                        <div class="col-sm-8 mx-auto text-center position-relative bg-warning bg-gradient rounded-3 mb-5">
+                            <!-- Main Title -->
+                            <h2 class="m-2 p-1"><?= htmlspecialchars($data['titles'][0]) ?></h2>
                         </div>
+                        <div class="row align-items-center mx-auto">
+                            <div class="col-sm-7 mx-auto mb-3">
+                                <!-- Title -->
+                                <?php foreach (array_slice($data['titles'], 1) as $title): ?>
+                                    <h2><?= htmlspecialchars($title) ?></h2>
+                                <?php endforeach; ?>
+                                <p class="lead"><?= htmlspecialchars($data['paragraphs']) ?></p>
+                            </div>
 
-                        <div class="col-sm-2 text-center mx-auto">
-                            <!-- Icon -->
-                            <h1>
-                                <i class="fa-solid fa-chart-line fa-2xl" style="color: #FFD43B;"></i>
-                            </h1>
-                        </div>
-                    </div>
-
-                    <div class="row align-items-center mx-auto mt-5">
-                        <div class="col-sm-7 mx-auto mb-3">
-                            <!-- Title -->
-                            <h2>Set up PayPal
-                            </h2>
-                            <p class="lead">Once you have logged in to your Affiliate Dashboard, you will need to set up
-                                a PayPal account so that you can be paid. Payouts are made monthly on the first business
-                                day of each month.
-                            </p>
-                        </div>
-
-                        <div class="col-sm-2 text-center mx-auto">
-                            <!-- Icon -->
-                            <h1>
-                                <i class="fa-brands fa-paypal fa-2xl" style="color: #FFD43B;"></i>
-                            </h1>
+                            <div class="col-sm-2 text-center mx-auto">
+                                <!-- Icon -->
+                                <h1>
+                                    <i class="<?= htmlspecialchars($data['icon_classes']) ?>" style="color: #FFD43B;"></i>
+                                </h1>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="row align-items-center mx-auto mt-5">
-                        <div class="col-sm-7 mx-auto mb-3">
-                            <!-- Title -->
-                            <h2>Affiliate Link Insertion
-                            </h2>
-                            <p class="lead">Copy the affiliate link(s) from your dashbaord and insert it/them into
-                                either text links or images (we can provide you with course images) that you would
-                                present to your user base or viewers (blogs, articles, newsletters etc.) you share or in
-                                your social media.
-
-                                you could either promote individual courses within our bundle or the whole bundle
-                                itself. Either way, it is the bundle that the student will purchase.
-                            </p>
-                        </div>
-
-                        <div class="col-sm-2 text-center mx-auto">
-                            <!-- Icon -->
-                            <h1>
-                                <i class="fa-solid fa-link fa-2xl" style="color: #FFD43B;"></i>
-                            </h1>
-                        </div>
-                    </div>
-
-                    <div class="row align-items-center mx-auto mt-5">
-                        <div class="col-sm-7 mx-auto mb-3">
-                            <!-- Title -->
-                            <h2>Promoting Our Courses
-                            </h2>
-                            <p class="lead">Remember, you can promote any/all of the courses within our product (or the
-                                whole product), however, all of our courses form part of the same bundle, that is, the
-                                student will always be taken to the same page for the final checkout.
-                            </p>
-                            <p class="lead">
-                                For example, if you only promote one of the courses within the bundle, for exmaple, the
-                                B2 Cambridge Course, then you should generate an affiliate link for that specific course
-                                so that once the user gets taken to the product page after viewing the B2 exam (for
-                                example), you will be paid because the cookie will track that link from the B2 course.
-                            </p>
-                        </div>
-
-                        <div class="col-sm-2 text-center mx-auto">
-                            <!-- Icon -->
-                            <h1>
-                                <i class="fa-solid fa-bullhorn fa-2xl" style="color: #FFD43B;"></i>
-                            </h1>
-                        </div>
-                    </div>
-
-                    <div class="row align-items-center mx-auto mt-5">
-                        <div class="col-sm-7 mx-auto mb-3">
-                            <!-- Title -->
-                            <h2>Track Your Earnings
-                            </h2>
-                            <p class="lead">make sure you keep track of your progress and earnings report so you can
-                                stay updated on the sales you make and the commissions you are owed, which will be paid
-                                to your PayPal account.
-                            </p>
-                        </div>
-
-                        <div class="col-sm-2 text-center mx-auto">
-                            <!-- Icon -->
-                            <h1>
-                                <i class="fa-solid fa-money-bill-trend-up fa-2xl" style="color: #FFD43B;"></i>
-                            </h1>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
         <!-- Section 5 END -->
