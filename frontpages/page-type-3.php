@@ -539,7 +539,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
     </main>
     <!-- **************** MAIN CONTENT END **************** -->
     <!-- Footer START -->
-    <?php include CENTRAL_PATH . 'includes/nav.php'; ?>
+    <?php include CENTRAL_PATH . 'includes/footer.php'; ?>
     <!-- Footer END -->
 
     <!-- Back to top -->
