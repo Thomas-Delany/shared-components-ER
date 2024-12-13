@@ -127,53 +127,29 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
 
         <section class="overflow-hidden">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12 mb-2 position-relative">
-                        <!-- Title -->
-                        <h2 class="text-center">In a Nutshell</h2>
-                    </div>
-                    <div class="col-md-9 mx-auto">
-                        <div class="row gx-5">
-                            <!-- FIrst column paragraph -->
-                            <div class="col-md-6">
-                                <p class="lead">In a nutshell, to be part of English Reservoir's Affiliate Program would
-                                    mean
-                                    that you can offer our online package (which includes all the courses) to your
-                                    students in
-                                    exchange for a 50% commission on every package your students purchase.
-                                </p>
-                                <p class="lead"><a href="https://cursos.englishreservoir.com/"
-                                        class="link-underline-primary">Our package</a> currently
-                                    sells for 7,99 USD + VAT (Spain), so, depending on
-                                    the
-                                    exchange rate, your earnings for every package would roughly amount to $4.00 (USD)
-                                    per
-                                    package per month.
-                                </p>
-                            </div>
+                <?php foreach ($section2 as $data): ?>
+                    <div class="row">
+                        <div class="col-md-12 mb-2 position-relative">
+                            <!-- Title -->
+                            <h2 class="text-center"><? htmlspecialchars($data['title']) ?></h2>
+                        </div>
+                        <div class="col-md-9 mx-auto">
+                            <div class="row gx-5">
+                                <!-- First column paragraph -->
+                                <div class="col-md-6">
+                                    <?php foreach (array_slice($data['paragraphs'], 0, 1) as $paragraph): ?>
+                                        <p class="lead"><?= htmlspecialchars($paragraph) ?></p>
+                                    <?php endforeach; ?>
 
-                            <!-- Second column paragraph -->
-                            <div class="col-md-6">
-                                <p class="lead">For example, if a student does not cancel their subscription you will
-                                    continue
-                                    to receive $4.00 for every month the student continues their subscription plan. You
-                                    will be paid for every month a student continues their subscription
-                                    plan.
-                                </p>
-                                <p class="lead">Furthermore, you must have a PayPal account to receive your funds. You
-                                    will
-                                    be
-                                    paid in USD.
-                                </p>
-                                <p class="lead">As one of our affiliates, you will have your dashboard from which to
-                                    track
-                                    all
-                                    relevant data such as your earnings, payouts, and students.
-                                </p>
+                                    <!-- Second column paragraph -->
+                                    <?php foreach (array_slice($data['paragraphs'], 2) as $paragraph): ?>
+                                        <p class="lead"><?= htmlspecialchars($paragraph) ?></p>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
 
