@@ -90,37 +90,35 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
             <!-- Content START -->
             <div class="container">
                 <!-- Title -->
-                <div class="row align-items-center g-5 pt-5">
-                    <!-- Left content START -->
-                    <div
-                        class="col-lg-5 col-xl-6 position-relative z-index-1 text-center text-lg-start mb-1 mb-sm-0 pt-md-5">
+                <?php foreach ($section1 as $data): ?>
+                    <div class="row align-items-center g-5 pt-5">
+                        <!-- Left content START -->
+                        <div
+                            class="col-lg-5 col-xl-6 position-relative z-index-1 text-center text-lg-start mb-1 mb-sm-0 pt-md-5">
 
-                        <!-- Title -->
-                        <h1 class="mb-0">Join Our Affiliate Programme
-                        </h1>
+                            <!-- Title -->
+                            <h1 class="mb-0"><?= htmlspecialchars($data['title']) ?></h1>
 
-                        <!-- Content -->
-                        <p class="my-4 lead">Joining English Reservoir's Affiliate Program would mean that you can
-                            offer our online
-                            package to your students in exchange for a 50% commission
-                            on every package your students purchase.</p>
+                            <!-- Content -->
+                            <p class="my-4 lead"><?= htmlspecialchars($data['paragraph']) ?></p>
 
-                        <div class="d-sm-flex align-items-center justify-content-center justify-content-lg-start">
-                            <!-- Button -->
-                            <a href="#" class="btn btn-lg btn-primary me-2 mb-sm-0">Become an Affiliate</a>
+                            <div class="d-sm-flex align-items-center justify-content-center justify-content-lg-start">
+                                <!-- Button -->
+                                <a href="<?= htmlspecialchars($data['url']) ?>" class="btn btn-lg btn-primary me-2 mb-sm-0"><?= htmlspecialchars($data['label']) ?></a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Left content END -->
+                        <!-- Left content END -->
 
-                    <!-- Right content START -->
-                    <div class="col-sm-4 text-center mx-auto position-relative pt-md-5 d-none d-sm-block">
-                        <!-- Image -->
-                        <div class="position-relative">
-                            <img src="<?php echo BASE_URL; ?>assets/images/element/cart.svg" alt="affiliate programme">
+                        <!-- Right content START -->
+                        <div class="col-sm-4 text-center mx-auto position-relative pt-md-5 d-none d-sm-block">
+                            <!-- Image -->
+                            <div class="position-relative">
+                                <img src="<?php echo BASE_URL; ?>assets/images/element/cart.svg" alt="<?= htmlspecialchars($data['alt']) ?>">
+                            </div>
                         </div>
+                        <!-- Right content END -->
                     </div>
-                    <!-- Right content END -->
-                </div>
+                <?php endforeach; ?>
             </div>
             <!-- Content END -->
         </section>
