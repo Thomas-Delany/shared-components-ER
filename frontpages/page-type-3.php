@@ -170,9 +170,9 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                 <?php foreach (array_slice($data['titles'], 1) as $title): ?>
                                     <h2><?= htmlspecialchars($title) ?></h2>
                                     <!-- Paragraphs -->
-                                    <?php foreach ($data['paragraphs'] as $index => $paragraph): ?>
-                                        <p class="lead"><?= htmlspecialchars($paragraph) ?></p>
-                                    <?php endforeach; ?>
+
+                                    <p class="lead"><?= htmlspecialchars($data['paragraphs']) ?></p>
+
                                 <?php endforeach; ?>
 
 
