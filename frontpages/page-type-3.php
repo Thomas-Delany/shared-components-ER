@@ -137,7 +137,7 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                             <div class="row gx-5">
                                 <!-- First column paragraph -->
                                 <div class="col-md-6">
-                                    <?php foreach (array_slice($data['paragraphs'], 0, 1) as $paragraph): ?>
+                                    <?php foreach (array_slice($data['paragraphs'], 0, 2) as $paragraph): ?>
                                         <p class="lead"><?= htmlspecialchars($paragraph) ?></p>
                                     <?php endforeach; ?>
                                 </div>
