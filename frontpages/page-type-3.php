@@ -11,7 +11,6 @@ $section1 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
 $section2 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-2');
 $section3 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-3');
 $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-4');
-$section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Section-5');
 ?>
 
 <!-- AFFILIATE PAGE -->
@@ -195,11 +194,11 @@ $section5 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                     <?php foreach ($data['titles'] as $section): ?>
                         <div class="row mb-4">
                             <div class="col-sm-8 fs-5">
-                                <h2 class="mt-5"></h2>
-                                <p class="mb-3"></p>
+                                <h2 class="mt-5"><?= htmlspecialchars($section['header']) ?></h2>
+                                <p class="mb-3"><?= htmlspecialchars($section['paragraphs']) ?></p>
 
                                 <div class="text-center m-5">
-                                    <img class="rounded-2" src="<?php echo BASE_URL; ?>"
+                                    <img class="rounded-2" src="<?php echo BASE_URL; ?><?= htmlspecialchars($column['image_path']) ?>"
                                         alt="x">
                                     </a>
                                 </div>
