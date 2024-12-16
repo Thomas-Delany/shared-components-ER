@@ -271,9 +271,6 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-
-
             </div>
         </section>
         <!-- Work END -->
