@@ -226,22 +226,19 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                             <!-- Section Header -->
                                             <h3 class="mt-4"><?php echo htmlspecialchars($nestedSection['heading']); ?></h3>
 
-                                            <!-- Course Columns -->
+                                            <!-- Course Columns (Three Columns Per Row) -->
                                             <div class="d-flex justify-content-center flex-wrap">
                                                 <?php if (isset($nestedSection['columns']) && is_array($nestedSection['columns'])): ?>
                                                     <?php foreach ($nestedSection['columns'] as $index => $column): ?>
-                                                        <div class="text-center m-2">
+                                                        <!-- Individual Column -->
+                                                        <div class="text-center m-2" style="width: 33%;">
                                                             <a href="<?php echo htmlspecialchars($column['url']); ?>">
                                                                 <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($column['image_path']); ?>" alt="<?php echo htmlspecialchars($column['alt']); ?>">
                                                             </a>
                                                         </div>
-                                                        <!-- Close and reopen the row after every 3 items -->
-                                                        <?php if (($index + 1) % 3 == 0): ?>
-                                            </div>
-                                            <div class="d-flex justify-content-center flex-wrap">
-                                            <?php endif; ?>
-                                        <?php endforeach; ?>
-                                    <?php endif; ?>
+                                                        <!-- Ensure rows break every 3 columns -->
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
                                             </div>
                                         <?php endforeach; ?>
                                     <?php endif; ?>
@@ -250,6 +247,7 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                     </div>
                 <?php endforeach; ?>
+
 
             </div>
         </section>
