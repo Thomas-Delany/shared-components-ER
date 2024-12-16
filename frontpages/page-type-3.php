@@ -191,33 +191,58 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
             <div class="container">
                 <!-- Title -->
                 <?php foreach ($section4 as $data): ?>
-                    <?php foreach ($data['titles'] as $section): ?>
-                        <div class="row mb-4">
-                            <div class="col-sm-8 fs-5">
-                                <h2 class="mt-5"><?= htmlspecialchars($section['header']) ?></h2>
+                    <div class="row mb-4">
+                        <div class="col-sm-8 fs-5">
+                            <?php if (isset($data['titles']) && is_array($data['titles'])): ?>
+                                <?php foreach ($data['titles'] as $title): ?>
+                                    <!-- Title Header -->
+                                    <h2 class="mt-5"><?php echo htmlspecialchars($title['header']); ?></h2>
 
-                                <?php foreach ($section['paragraphs'] as $paragraph): ?>
-                                    <p class="mb-3"><?= htmlspecialchars($paragraph['paragraphs']) ?></p>
+                                    <!-- Paragraphs -->
+                                    <?php if (isset($title['paragraphs']) && is_array($title['paragraphs'])): ?>
+                                        <?php foreach ($title['paragraphs'] as $paragraph): ?>
+                                            <p class="mb-3"><?php echo htmlspecialchars($paragraph); ?></p>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+
+                                    <!-- Image (Single or Multiple) -->
+                                    <?php if (isset($title['image_path'])): ?>
+                                        <?php if (is_array($title['image_path'])): ?>
+                                            <?php foreach ($title['image_path'] as $image): ?>
+                                                <div class="text-center m-5">
+                                                    <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($image); ?>" alt="<?php echo htmlspecialchars($title['header']); ?>">
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <div class="text-center m-5">
+                                                <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($title['image_path']); ?>" alt="<?php echo htmlspecialchars($title['header']); ?>">
+                                            </div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+
+                                    <!-- Nested Sections (e.g., Courses) -->
+                                    <?php if (isset($title['sections']) && is_array($title['sections'])): ?>
+                                        <div class="d-flex justify-content-center">
+                                            <?php foreach ($title['sections'] as $nestedSection): ?>
+                                                <div class="text-center m-2">
+                                                    <h3><?php echo htmlspecialchars($nestedSection['heading']); ?></h3>
+                                                    <?php if (isset($nestedSection['columns']) && is_array($nestedSection['columns'])): ?>
+                                                        <?php foreach ($nestedSection['columns'] as $column): ?>
+                                                            <a href="<?php echo htmlspecialchars($column['url']); ?>">
+                                                                <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($column['image_path']); ?>" alt="<?php echo htmlspecialchars($column['alt']); ?>">
+                                                            </a>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
-
-                                <div class="text-center m-5">
-                                    <img class="rounded-2" src="<?php echo BASE_URL; ?><?= htmlspecialchars($column['image_path']) ?>"
-                                        alt="x">
-                                    </a>
-                                </div>
-
-                                <div class="d-flex justify-content-center">
-                                    <div class="text-center m-2">
-                                        <a href="#">
-                                            <img class="rounded-2" src="<?php echo BASE_URL; ?>x" alt="x">
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
+                            <?php endif; ?>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
                 <?php endforeach; ?>
+
             </div>
         </section>
         <!-- Work END -->
