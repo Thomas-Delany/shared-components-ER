@@ -195,7 +195,10 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         <div class="row mb-4">
                             <div class="col-sm-8 fs-5">
                                 <h2 class="mt-5"><?= htmlspecialchars($section['header']) ?></h2>
-                                <p class="mb-3"><?= htmlspecialchars($section['paragraphs']) ?></p>
+
+                                <?php foreach ($section['paragraphs'] as $paragraph): ?>
+                                    <p class="mb-3"><?= htmlspecialchars($paragraph['paragraphs']) ?></p>
+                                <?php endforeach; ?>
 
                                 <div class="text-center m-5">
                                     <img class="rounded-2" src="<?php echo BASE_URL; ?><?= htmlspecialchars($column['image_path']) ?>"
