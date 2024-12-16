@@ -220,25 +220,49 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                         <?php endif; ?>
                                     <?php endif; ?>
 
-                                    <!-- Nested Sections (Courses with Headers and 3 Columns Per Row) -->
+                                    <!-- Nested Sections (Courses with Headers and Explicit 3 Rows) -->
                                     <?php if (isset($title['sections']) && is_array($title['sections'])): ?>
                                         <?php foreach ($title['sections'] as $nestedSection): ?>
                                             <!-- Section Header -->
                                             <h3 class="mt-4"><?php echo htmlspecialchars($nestedSection['heading']); ?></h3>
 
-                                            <!-- Course Columns (Three Columns Per Row) -->
-                                            <div class="d-flex justify-content-center flex-wrap">
-                                                <?php if (isset($nestedSection['columns']) && is_array($nestedSection['columns'])): ?>
-                                                    <?php foreach ($nestedSection['columns'] as $index => $column): ?>
-                                                        <!-- Individual Column -->
-                                                        <div class="text-center m-2" style="width: 33%;">
-                                                            <a href="<?php echo htmlspecialchars($column['url']); ?>">
-                                                                <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($column['image_path']); ?>" alt="<?php echo htmlspecialchars($column['alt']); ?>">
+                                            <!-- First Row -->
+                                            <div class="d-flex justify-content-center">
+                                                <?php for ($i = 0; $i < 3; $i++): ?>
+                                                    <?php if (isset($nestedSection['columns'][$i])): ?>
+                                                        <div class="text-center m-2">
+                                                            <a href="<?php echo htmlspecialchars($nestedSection['columns'][$i]['url']); ?>">
+                                                                <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($nestedSection['columns'][$i]['image_path']); ?>" alt="<?php echo htmlspecialchars($nestedSection['columns'][$i]['alt']); ?>">
                                                             </a>
                                                         </div>
-                                                        <!-- Ensure rows break every 3 columns -->
-                                                    <?php endforeach; ?>
-                                                <?php endif; ?>
+                                                    <?php endif; ?>
+                                                <?php endfor; ?>
+                                            </div>
+
+                                            <!-- Second Row -->
+                                            <div class="d-flex justify-content-center">
+                                                <?php for ($i = 3; $i < 6; $i++): ?>
+                                                    <?php if (isset($nestedSection['columns'][$i])): ?>
+                                                        <div class="text-center m-2">
+                                                            <a href="<?php echo htmlspecialchars($nestedSection['columns'][$i]['url']); ?>">
+                                                                <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($nestedSection['columns'][$i]['image_path']); ?>" alt="<?php echo htmlspecialchars($nestedSection['columns'][$i]['alt']); ?>">
+                                                            </a>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                <?php endfor; ?>
+                                            </div>
+
+                                            <!-- Third Row -->
+                                            <div class="d-flex justify-content-center">
+                                                <?php for ($i = 6; $i < 9; $i++): ?>
+                                                    <?php if (isset($nestedSection['columns'][$i])): ?>
+                                                        <div class="text-center m-2">
+                                                            <a href="<?php echo htmlspecialchars($nestedSection['columns'][$i]['url']); ?>">
+                                                                <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($nestedSection['columns'][$i]['image_path']); ?>" alt="<?php echo htmlspecialchars($nestedSection['columns'][$i]['alt']); ?>">
+                                                            </a>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                <?php endfor; ?>
                                             </div>
                                         <?php endforeach; ?>
                                     <?php endif; ?>
@@ -247,6 +271,7 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                         </div>
                     </div>
                 <?php endforeach; ?>
+
 
 
             </div>
