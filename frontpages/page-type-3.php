@@ -220,22 +220,30 @@ $section4 = array_filter($pageSections, fn($section) => $section['type'] === 'Se
                                         <?php endif; ?>
                                     <?php endif; ?>
 
-                                    <!-- Nested Sections (e.g., Courses) -->
+                                    <!-- Nested Sections (Courses with Headers and 3 Columns Per Row) -->
                                     <?php if (isset($title['sections']) && is_array($title['sections'])): ?>
-                                        <div class="d-flex justify-content-center">
-                                            <?php foreach ($title['sections'] as $nestedSection): ?>
-                                                <div class="text-center m-2">
-                                                    <h3><?php echo htmlspecialchars($nestedSection['heading']); ?></h3>
-                                                    <?php if (isset($nestedSection['columns']) && is_array($nestedSection['columns'])): ?>
-                                                        <?php foreach ($nestedSection['columns'] as $column): ?>
+                                        <?php foreach ($title['sections'] as $nestedSection): ?>
+                                            <!-- Section Header -->
+                                            <h3 class="mt-4"><?php echo htmlspecialchars($nestedSection['heading']); ?></h3>
+
+                                            <!-- Course Columns -->
+                                            <div class="d-flex justify-content-center flex-wrap">
+                                                <?php if (isset($nestedSection['columns']) && is_array($nestedSection['columns'])): ?>
+                                                    <?php foreach ($nestedSection['columns'] as $index => $column): ?>
+                                                        <div class="text-center m-2">
                                                             <a href="<?php echo htmlspecialchars($column['url']); ?>">
                                                                 <img class="rounded-2" src="<?php echo BASE_URL . htmlspecialchars($column['image_path']); ?>" alt="<?php echo htmlspecialchars($column['alt']); ?>">
                                                             </a>
-                                                        <?php endforeach; ?>
-                                                    <?php endif; ?>
-                                                </div>
-                                            <?php endforeach; ?>
-                                        </div>
+                                                        </div>
+                                                        <!-- Close and reopen the row after every 3 items -->
+                                                        <?php if (($index + 1) % 3 == 0): ?>
+                                            </div>
+                                            <div class="d-flex justify-content-center flex-wrap">
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                            </div>
+                                        <?php endforeach; ?>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             <?php endif; ?>
