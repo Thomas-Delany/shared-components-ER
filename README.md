@@ -39,7 +39,7 @@ Other technical points to note about this project:
 
 (2) I’ve made extensive use of PHP foreach loops, in particular, to loop over all the data from the json files (located in their respective domain-specific repos), because I found this to be the most straightforward approach.
 
-(3) Although “englishreservoir.co.uk” serves as more of a testing ground (before I actually enact any changes in the other cctlds), I plan to also serve the englishreservoir.co.uk domain with the shared-components-ER submodule too.
+(3) Although “englishreservoir.co.uk” (https://github.com/Thomas-Delany/English_Reservoir) serves as more of a testing ground (before I actually enact any changes in the other cctlds), I plan to also serve the englishreservoir.co.uk domain with the shared-components-ER submodule too.
 
 (4) Google ads and some third-party link insertions are in place on .com, and will also be implemented on all other cctld’s in order to obtain some financial gains whilst always maintaining the content for all domains free to the end user.
 
