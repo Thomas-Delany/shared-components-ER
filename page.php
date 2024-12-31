@@ -1,4 +1,5 @@
 <?php
+// Debugging: Log request details
 file_put_contents('debug.log', print_r($_SERVER, true), FILE_APPEND);
 
 // Get the requested URL path
@@ -7,8 +8,11 @@ $urlPath = trim($urlPath, '/');
 $urlPath = str_replace('..', '', $urlPath); // Prevent directory traversal attacks
 
 // Paths
-$baseDir = __DIR__ . '/../data/pages/'; // JSON files location
-$templateDir = __DIR__ . '/templates/'; // Templates directory
+$baseDir = __DIR__ . '/../data/pages/'; // JSON files location (in domain-specific repo)
+$templateDir = __DIR__ . '/templates/'; // Templates directory (in domain-specific repo)
+$centralTemplateDir = __DIR__ . '/../central/templates/'; // Path to central templates (submodule)
+
+// Load the centralized config
 $config = include __DIR__ . '/config.php'; // Load centralized PHP variables
 
 // Map URL to JSON file
@@ -43,7 +47,12 @@ if (file_exists($jsonPath)) {
 
     // Determine the appropriate template to use
     $template = $pageData['template'] ?? 'default_template.php';
-    $templatePath = $templateDir . $template;
+    $templatePath = $centralTemplateDir . $template; // Check in the central submodule first
+
+    // Fall back to the main template directory if not found in the central submodule
+    if (!file_exists($templatePath)) {
+        $templatePath = $templateDir . $template;
+    }
 
     // Include the selected template or fall back to a default one
     if (file_exists($templatePath)) {
