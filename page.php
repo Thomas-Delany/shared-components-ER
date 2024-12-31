@@ -1,4 +1,5 @@
 <?php
+file_put_contents('debug.log', print_r($_SERVER, true), FILE_APPEND);
 
 // Get the requested URL path
 $urlPath = $_GET['url'] ?? 'default'; // Default to "default" if no URL is provided
