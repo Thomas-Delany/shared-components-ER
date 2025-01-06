@@ -15,7 +15,8 @@ $templateDir = __DIR__ . '/templates/'; // Templates directory (in domain-specif
 $centralTemplateDir = __DIR__ . '/../central/templates/'; // Path to central templates (submodule)
 
 // Load the centralized config
-$config = include __DIR__ . '/config.php'; // Load centralized PHP variables
+$config = include __DIR__ . '/../config.php'; // Load centralized PHP variables
+
 
 // Map URL to JSON file
 $jsonPath = $baseDir . $urlPath . '.json';
