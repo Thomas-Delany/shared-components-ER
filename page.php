@@ -15,14 +15,8 @@ $templateDir = __DIR__ . '/templates/'; // Templates directory (in domain-specif
 $centralTemplateDir = __DIR__ . '/../central/templates/'; // Path to central templates (submodule)
 
 // Load the centralized config
-$debugDir = __DIR__;
-$debugConfigPath = $debugDir . '/../config.php';
+$config = include '/home/u152002334/domains/englishreservoir.pt/public_html/config.php';
 
-// Log debugging info
-file_put_contents('debug.log', "Current directory: $debugDir\n", FILE_APPEND);
-file_put_contents('debug.log', "Attempting to load config.php from: $debugConfigPath\n", FILE_APPEND);
-
-$config = include $debugConfigPath;
 
 
 
