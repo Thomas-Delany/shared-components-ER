@@ -3,7 +3,7 @@ require_once CENTRAL_PATH . 'includes/functions.php';
 
 $index_data = load_json(__DIR__ . '/../data/pages/index.json');
 
-// JSON data includes
+// JSON data includes TEST1
 $indexData = $index_data['sections'];
 
 // Render Analytics Section
