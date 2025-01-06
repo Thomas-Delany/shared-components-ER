@@ -1,6 +1,8 @@
 <?php
-// Debugging: Log request details
-file_put_contents('debug.log', print_r($_SERVER, true), FILE_APPEND);
+
+file_put_contents('debug.log', "Requested URL: " . ($_GET['url'] ?? 'no URL') . PHP_EOL, FILE_APPEND);
+
+
 
 // Get the requested URL path
 $urlPath = $_GET['url'] ?? 'default'; // Default to "default" if no URL is provided
