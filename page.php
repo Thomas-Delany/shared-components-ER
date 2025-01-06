@@ -15,7 +15,11 @@ $templateDir = __DIR__ . '/templates/'; // Templates directory (in domain-specif
 $centralTemplateDir = __DIR__ . '/../central/templates/'; // Path to central templates (submodule)
 
 // Load the centralized config
-$config = include __DIR__ . '/../config.php'; // Load centralized PHP variables
+$debugConfigPath = __DIR__ . '/../config.php';
+file_put_contents('debug.log', "Attempting to load config.php from: $debugConfigPath\n", FILE_APPEND);
+
+$config = include $debugConfigPath;
+
 
 
 // Map URL to JSON file
