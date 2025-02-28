@@ -1,3 +1,5 @@
+#This project is now being undertaken in a separate private repo due to the limitations of having begun this project without a framework. I am now continuing the work with Laravel, PHP, Bootstrap and Blade, which will provide a much more professional setting in which to work and thus allow me to keep all the code much more modular and DRY. Let this repo serve as a prototype for what’s to come as you can read from the Readme file. 
+
 #Shared-components-ES
 
 I have decided to make the “shared-components-ER” central submodule repository public to showcase the English Reservoir project and transparently illustrate my objectives going forward.
